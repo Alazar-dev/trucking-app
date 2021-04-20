@@ -7,7 +7,7 @@ const Profile = () => {
     <Container>
       <Toolbar title="Profile" />
       <ScrollView>
-        <Text>Profile</Text>
+        <Text>Settings</Text>
       </ScrollView>
     </Container>
   );

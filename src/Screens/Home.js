@@ -27,12 +27,8 @@ const Home = ({navigation}) => {
         <ScrollView
           contentInsetAdjustmentBehavior="automatic"
           style={styles.scrollView}>
-          <Button
-            title="Go to Jane's profile"
-            onPress={() => navigation.navigate('Profile', {name: 'Jane'})}
-          />
           <View style={styles.body}>
-            <Text>Hello World</Text>
+            <Text>Home</Text>
           </View>
         </ScrollView>
       </SafeAreaView>

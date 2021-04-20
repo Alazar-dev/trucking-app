@@ -1,9 +1,9 @@
 import React from 'react';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import HomeScreen from './Home';
-import CartScreen from './Cart';
-import TransactionScreen from './Transaction';
-import ProfileScreen from './Profile';
+import EarningsScreen from './Earnings';
+import TransactionScreen from './Orders';
+import ProfileScreen from './Settings';
 import UserAgreementScreen from './UserAgreement';
 import Icon from 'react-native-vector-icons/FontAwesome';
 import {Stack} from 'react-native';
@@ -25,17 +25,17 @@ const MainTab = () => {
         options={{
           tabBarLabel: 'Home',
           tabBarIcon: ({color, size}) => (
-            <Icon name="home" color={color} size={size * 0.9} />
+            <Icon name="map-marker" color={color} size={size * 0.9} />
           ),
         }}
       />
       <Tab.Screen
-        name="Cart"
-        component={CartScreen}
+        name="Earnings"
+        component={EarningsScreen}
         options={{
-          tabBarLabel: 'Cart',
+          tabBarLabel: 'Earnings',
           tabBarIcon: ({color, size}) => (
-            <Icon name="shopping-cart" color={color} size={size * 0.9} />
+            <Icon name="fa-chart-pie" color={color} size={size * 0.9} />
           ),
         }}
       />
@@ -45,7 +45,7 @@ const MainTab = () => {
         options={{
           tabBarLabel: 'Transaction',
           tabBarIcon: ({color, size}) => (
-            <Icon name="exchange" color={color} size={size * 0.9} />
+            <Icon name="layer-group" color={color} size={size * 0.9} />
           ),
         }}
       />
@@ -55,7 +55,7 @@ const MainTab = () => {
         options={{
           tabBarLabel: 'Profile',
           tabBarIcon: ({color, size}) => (
-            <Icon name="user" color={color} size={size * 0.9} />
+            <Icon name="cog" color={color} size={size * 0.9} />
           ),
           tabBarBadge: '10',
         }}
