@@ -10,6 +10,8 @@ import WhatWeDoScreen from './whatwedo/WhatWeDo';
 import Fast from './whatwedo/Fast';
 import Reliable from './whatwedo/Reliable';
 import UpToDate from './whatwedo/UpToDate';
+import VehicleDetail from './vehicleDetail/VehicleDetail';
+import Document from './vehicleDetail/Document';
 import UserAgreementScreen from './UserAgreement';
 import AuthContext from 'helpers/AuthContext';
 
@@ -51,6 +53,8 @@ const App = (props) => {
           <Stack.Screen name="Fast" component={Fast} />
           <Stack.Screen name="Reliable" component={Reliable} />
           <Stack.Screen name="UpToDate" component={UpToDate} />
+          <Stack.Screen name="VehicleDetail" component={VehicleDetail} />
+          <Stack.Screen name="Document" component={Document} />
           <Stack.Screen name="SignIn" component={SignInScreen} />
           <Stack.Screen name="UserAgreement" component={UserAgreementScreen} />
           <Stack.Screen name="Home" component={MainTab} />
