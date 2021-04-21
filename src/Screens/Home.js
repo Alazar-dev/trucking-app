@@ -17,11 +17,12 @@ import {
   Modal,
   Alert,
   Pressable,
+  TouchableOpacity,
 } from 'react-native';
 
 import {Colors} from 'react-native/Libraries/NewAppScreen';
 
-const Home = ({navigation}) => {
+const Home = (props) => {
   const [modalVisible, setModalVisible] = useState(true);
   return (
     <>
@@ -54,11 +55,14 @@ const Home = ({navigation}) => {
                         marginTop: 40,
                       }}
                     />
-                    <Pressable
+                    <TouchableOpacity
                       style={[styles.button, styles.buttonClose]}
-                      onPress={() => setModalVisible(!modalVisible)}>
+                      onPress={() =>
+                        props.navigation.navigate('VehicleDetail') &&
+                        setModalVisible(!modalVisible)
+                      }>
                       <Text style={styles.textStyle}>Continue</Text>
-                    </Pressable>
+                    </TouchableOpacity>
                   </View>
                 </View>
               </Modal>
