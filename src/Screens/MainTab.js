@@ -4,9 +4,7 @@ import HomeScreen from './Home';
 import EarningsScreen from './Earnings';
 import TransactionScreen from './Orders';
 import ProfileScreen from './Settings';
-import UserAgreementScreen from './UserAgreement';
 import Icon from 'react-native-vector-icons/FontAwesome';
-import {Stack} from 'react-native';
 
 const MainTab = () => {
   const Tab = createBottomTabNavigator();
@@ -35,7 +33,7 @@ const MainTab = () => {
         options={{
           tabBarLabel: 'Earnings',
           tabBarIcon: ({color, size}) => (
-            <Icon name="fa-chart-pie" color={color} size={size * 0.9} />
+            <Icon name="money" color={color} size={size * 0.9} />
           ),
         }}
       />
@@ -45,7 +43,7 @@ const MainTab = () => {
         options={{
           tabBarLabel: 'Transaction',
           tabBarIcon: ({color, size}) => (
-            <Icon name="layer-group" color={color} size={size * 0.9} />
+            <Icon name="clipboard" color={color} size={size * 0.9} />
           ),
         }}
       />
