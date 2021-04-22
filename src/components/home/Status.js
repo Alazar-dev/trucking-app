@@ -14,7 +14,6 @@ const Flex = () => {
       style={[
         styles.container,
         {
-          // Try setting `flexDirection` to `"row"`.
           flexDirection: 'row',
         },
       ]}>
