@@ -7,18 +7,20 @@
  */
 
 import React from 'react';
-import {ScrollView, StatusBar} from 'react-native';
+import {StatusBar, View} from 'react-native';
 
 import WelcomeModal from '../components/modal/ModalWelcome';
+import Map from '../components/Map';
+import Status from '../components/home/Status';
 
 const Home = (props) => {
   return (
-    <>
+    <View>
       <StatusBar barStyle="dark-content" />
-      <ScrollView contentInsetAdjustmentBehavior="automatic">
-        <WelcomeModal />
-      </ScrollView>
-    </>
+      <Map />
+      <WelcomeModal />
+      <Status />
+    </View>
   );
 };
 
