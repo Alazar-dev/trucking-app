@@ -1,7 +1,6 @@
 import React, {useState} from 'react';
-import Icon from 'react-native-vector-icons/FontAwesome';
-import {View, Text, StyleSheet, Picker} from 'react-native';
-import {Badge} from 'react-native-elements';
+import {View, Text, StyleSheet} from 'react-native';
+import {Picker} from '@react-native-community/picker';
 
 const HeaderHome = () => {
   const [selectedValue, setSelectedValue] = useState('java');
@@ -13,16 +12,9 @@ const HeaderHome = () => {
           flexDirection: 'row',
         },
       ]}>
-      <View style={{flex: 6}}>
-        <Icon name="comment" size={40} color="#20b2aa" />
-        <Badge
-          value="3"
-          status="error"
-          containerStyle={{position: 'absolute', top: 10, right: 75}}
-        />
-      </View>
+      <View style={{flex: 6}} />
       <View style={{flex: 9}}>
-        <Text style={styles.topText}>GMC Suburban</Text>
+        <Text style={styles.topText}>Earnings</Text>
         <View>
           <Picker
             selectedValue={selectedValue}
@@ -35,13 +27,8 @@ const HeaderHome = () => {
           </Picker>
         </View>
       </View>
-      <View style={{flex: 2}}>
-        <Icon name="bell" size={40} color="#000000" />
-        <Badge
-          value="3"
-          status="error"
-          containerStyle={{position: 'absolute', top: 10, right: 0}}
-        />
+      <View style={{flex: 5}}>
+        <Text>Send Invoice</Text>
       </View>
     </View>
   );
