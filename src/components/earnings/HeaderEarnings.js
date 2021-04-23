@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 import {View, Text, StyleSheet} from 'react-native';
 import {Picker} from '@react-native-community/picker';
 
-const HeaderHome = () => {
+const HeaderEarnings = () => {
   const [selectedValue, setSelectedValue] = useState('java');
   return (
     <View
@@ -42,4 +42,4 @@ const styles = StyleSheet.create({
     fontSize: 20,
   },
 });
-export default HeaderHome;
+export default HeaderEarnings;
