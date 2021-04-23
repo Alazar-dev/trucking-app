@@ -1,9 +1,9 @@
 import React from 'react';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
-import HomeScreen from './Home';
-import EarningsScreen from './Earnings';
-import TransactionScreen from './Orders';
-import ProfileScreen from './Settings';
+import HomeScreen from './main/Home';
+import EarningsScreen from './main/Earnings';
+import OrdersScreen from './main/Orders';
+import ProfileScreen from './main/Settings';
 import Icon from 'react-native-vector-icons/FontAwesome';
 
 const MainTab = () => {
@@ -12,10 +12,8 @@ const MainTab = () => {
     <Tab.Navigator
       style={{container: {backgroundColor: 'green'}}}
       tabBarOptions={{
-        activeTintColor: '#e91e63',
+        activeTintColor: '#2baab2',
         inactiveTintColor: '#999999',
-        // inactiveBackgroundColor: 'red',
-        // activeBackgroundColor: 'transparent',
       }}>
       <Tab.Screen
         name="Home"
@@ -38,10 +36,10 @@ const MainTab = () => {
         }}
       />
       <Tab.Screen
-        name="Transaction"
-        component={TransactionScreen}
+        name="Orders"
+        component={OrdersScreen}
         options={{
-          tabBarLabel: 'Transaction',
+          tabBarLabel: 'Orders',
           tabBarIcon: ({color, size}) => (
             <Icon name="clipboard" color={color} size={size * 0.9} />
           ),
