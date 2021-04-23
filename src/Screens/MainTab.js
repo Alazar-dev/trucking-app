@@ -3,7 +3,7 @@ import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import HomeScreen from './main/Home';
 import EarningsScreen from './main/Earnings';
 import OrdersScreen from './main/Orders';
-import ProfileScreen from './main/Settings';
+import SettingScreen from './main/Settings';
 import Icon from 'react-native-vector-icons/FontAwesome';
 
 const MainTab = () => {
@@ -46,10 +46,10 @@ const MainTab = () => {
         }}
       />
       <Tab.Screen
-        name="Profile"
-        component={ProfileScreen}
+        name="Setting"
+        component={SettingScreen}
         options={{
-          tabBarLabel: 'Profile',
+          tabBarLabel: 'Setting',
           tabBarIcon: ({color, size}) => (
             <Icon name="cog" color={color} size={size * 0.9} />
           ),
