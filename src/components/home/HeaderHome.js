@@ -1,7 +1,8 @@
 import React, {useState} from 'react';
 import Icon from 'react-native-vector-icons/FontAwesome';
-import {View, Text, StyleSheet, Picker} from 'react-native';
+import {View, Text, StyleSheet} from 'react-native';
 import {Badge} from 'react-native-elements';
+import {Picker} from '@react-native-community/picker'
 
 const HeaderHome = () => {
   const [selectedValue, setSelectedValue] = useState('java');
