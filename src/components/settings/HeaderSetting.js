@@ -1,7 +1,7 @@
 import React from 'react';
 import {View, Text, StyleSheet} from 'react-native';
 
-const HeaderSetting = () => {
+const HeaderSettings = () => {
   return (
     <View style={styles.container}>
       <View style={{flex: 6}} />
@@ -21,4 +21,4 @@ const styles = StyleSheet.create({
     fontSize: 20,
   },
 });
-export default HeaderSetting;
+export default HeaderSettings;
