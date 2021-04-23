@@ -2,12 +2,14 @@ import React from 'react';
 import {ScrollView, Text} from 'react-native';
 import {Container, Toolbar} from 'components';
 
+import HeaderSetting from '../../components/settings/HeaderSetting';
+
 const Profile = () => {
   return (
     <Container>
-      <Toolbar title="Profile" />
       <ScrollView>
-        <Text>Settings</Text>
+        <HeaderSetting />
+        <Text>Setting</Text>
       </ScrollView>
     </Container>
   );

@@ -1,16 +1,15 @@
 import React from 'react';
-import {ScrollView, Text} from 'react-native';
-import {Container, Toolbar} from 'components';
+import {ScrollView, View} from 'react-native';
+import {HeaderOrders} from '../../components/orders/HeaderOrders';
 
-const Transaction = () => {
+const Orders = () => {
   return (
-    <Container>
-      <Toolbar title="Transaction" />
+    <View>
       <ScrollView>
-        <Text>Orders</Text>
+        <HeaderOrders />
       </ScrollView>
-    </Container>
+    </View>
   );
 };
 
-export default Transaction;
+export default Orders;
