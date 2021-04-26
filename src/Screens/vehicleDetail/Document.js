@@ -17,7 +17,7 @@ const Document = (props) => {
             <Text style={styles.mainText}>Document</Text>
           </View>
           <View style={styles.body}>
-            <Text>
+            <Text style={{textAlign: 'center'}}>
               One more thing and then you are done Attach your drivers Licence
             </Text>
             <TouchableOpacity>
