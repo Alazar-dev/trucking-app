@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import {View, Text, StyleSheet} from 'react-native';
-import {Picker} from '@react-native-community/picker';
+// import {Picker} from '@react-native-community/picker';
 
 const HeaderEarnings = () => {
   const [selectedValue, setSelectedValue] = useState('java');
@@ -16,7 +16,7 @@ const HeaderEarnings = () => {
       <View style={{flex: 9}}>
         <Text style={styles.topText}>Earnings</Text>
         <View>
-          <Picker
+          {/* <Picker
             selectedValue={selectedValue}
             style={{height: 50, width: 300}}
             onValueChange={(itemValue, itemIndex) =>
@@ -24,7 +24,7 @@ const HeaderEarnings = () => {
             }>
             <Picker.Item label="GMC Suburban" value="gmcsuburban" />
             <Picker.Item label="Toyota V8" value="toyotav8" />
-          </Picker>
+          </Picker> */}
         </View>
       </View>
       <View style={{flex: 5}}>
