@@ -2,7 +2,6 @@ import React, {useState} from 'react';
 import Icon from 'react-native-vector-icons/FontAwesome';
 import {View, Text, StyleSheet} from 'react-native';
 import {Badge} from 'react-native-elements';
-import {Picker} from '@react-native-community/picker'
 
 const HeaderHome = () => {
   const [selectedValue, setSelectedValue] = useState('java');
@@ -25,7 +24,7 @@ const HeaderHome = () => {
       <View style={{flex: 9}}>
         <Text style={styles.topText}>GMC Suburban</Text>
         <View>
-          <Picker
+          {/* <Picker
             selectedValue={selectedValue}
             style={{height: 50, width: 300}}
             onValueChange={(itemValue, itemIndex) =>
@@ -33,7 +32,7 @@ const HeaderHome = () => {
             }>
             <Picker.Item label="GMC Suburban" value="gmcsuburban" />
             <Picker.Item label="Toyota V8" value="toyotav8" />
-          </Picker>
+          </Picker> */}
         </View>
       </View>
       <View style={{flex: 2}}>
