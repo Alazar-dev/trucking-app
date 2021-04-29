@@ -4,7 +4,7 @@ import HomeScreen from './main/Home';
 import EarningsScreen from './main/Earnings';
 import OrdersScreen from './main/Orders';
 import SettingScreen from './main/Settings';
-import Icon from 'react-native-vector-icons/FontAwesome';
+import {AntDesign} from '@expo/vector-icons';
 
 const MainTab = () => {
   const Tab = createBottomTabNavigator();
@@ -21,7 +21,7 @@ const MainTab = () => {
         options={{
           tabBarLabel: 'Home',
           tabBarIcon: ({color, size}) => (
-            <Icon name="map-marker" color={color} size={size * 0.9} />
+            <AntDesign name="stepforward" size={24} color="black" />
           ),
         }}
       />
@@ -31,7 +31,7 @@ const MainTab = () => {
         options={{
           tabBarLabel: 'Earnings',
           tabBarIcon: ({color, size}) => (
-            <Icon name="money" color={color} size={size * 0.9} />
+            <AntDesign name="stepforward" size={24} color="black" />
           ),
         }}
       />
@@ -41,7 +41,7 @@ const MainTab = () => {
         options={{
           tabBarLabel: 'Orders',
           tabBarIcon: ({color, size}) => (
-            <Icon name="clipboard" color={color} size={size * 0.9} />
+            <AntDesign name="stepforward" size={24} color="black" />
           ),
         }}
       />
@@ -51,9 +51,8 @@ const MainTab = () => {
         options={{
           tabBarLabel: 'Setting',
           tabBarIcon: ({color, size}) => (
-            <Icon name="cog" color={color} size={size * 0.9} />
+            <AntDesign name="stepforward" size={24} color="black" />
           ),
-          tabBarBadge: '10',
         }}
       />
     </Tab.Navigator>
