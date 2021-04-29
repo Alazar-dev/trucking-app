@@ -18,13 +18,13 @@ const Flex = () => {
         },
       ]}>
       <View style={{flex: 6}}>
-        <Text>Your Status</Text>
+        <Text style={{color: '#2baab2'}}>Your Status</Text>
         <Text>Online/Offline</Text>
       </View>
       <View style={{flex: 2}}>
         <Switch
           style={{transform: [{scaleX: 1.4}, {scaleY: 1.4}]}}
-          trackColor={{false: '#767577', true: '#81b0ff'}}
+          trackColor={{false: '#767577', true: '#2baab2'}}
           thumbColor={'#f4f3f4'}
           ios_backgroundColor="#3e3e3e"
           onValueChange={toggleSwitch}
@@ -32,13 +32,13 @@ const Flex = () => {
         />
       </View>
       <View style={{flex: 6}}>
-        <Text>Accept +5 Miles?</Text>
+        <Text style={{color: '#2baab2'}}>Accept +5 Miles?</Text>
         <Text>Yes/No</Text>
       </View>
       <View style={{flex: 2}}>
         <Switch
           style={{transform: [{scaleX: 1.4}, {scaleY: 1.4}]}}
-          trackColor={{false: '#767577', true: '#81b0ff'}}
+          trackColor={{false: '#767577', true: '#2baab2'}}
           thumbColor={'#f4f3f4'}
           ios_backgroundColor="#3e3e3e"
           onValueChange={toggleSwitchTwo}
@@ -51,9 +51,8 @@ const Flex = () => {
 
 const styles = StyleSheet.create({
   container: {
-    position: 'absolute',
-    top: 450,
-    paddingHorizontal: 20,
+    top: '-11%',
+    paddingHorizontal: '5%',
   },
 });
 
