@@ -40,7 +40,7 @@ export default function DataTable() {
           <View style={{height: '55%', flex: 20}}>
             <Text style={{color: '#2baab2'}}>{total.company}</Text>
             <Text>{total.location}</Text>
-            <Text>{total.detail}</Text>
+            <Text style={{color: '#767579'}}>{total.detail}</Text>
           </View>
           <View style={{height: '55%', flex: 5}}>
             <Text>{total.carType}</Text>

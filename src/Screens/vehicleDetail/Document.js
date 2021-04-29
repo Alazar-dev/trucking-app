@@ -41,6 +41,7 @@ const Document = (props) => {
 const styles = StyleSheet.create({
   mainBody: {
     marginTop: 30,
+    marginVertical: '0%',
   },
   mainText: {
     color: '#000000',
