@@ -1,6 +1,6 @@
 import React from 'react';
 import {View, Text, StyleSheet} from 'react-native';
-import {Ionicons} from '@expo/vector-icons';
+import {Feather, Fontisto} from '@expo/vector-icons';
 
 const HeaderHome = () => {
   return (
@@ -12,13 +12,13 @@ const HeaderHome = () => {
         },
       ]}>
       <View style={{flex: 6}}>
-        <Ionicons name="md-checkmark-circle" size={24} color="black" />
+        <Feather name="message-circle" size={24} color="#20b2aa" />
       </View>
       <View style={{flex: 9}}>
-        <Text style={styles.topText}>GMC Suburban</Text>
+        <Text style={styles.topText}>Freightliner</Text>
       </View>
       <View style={{flex: 2}}>
-        <Ionicons name="md-checkmark-circle" size={24} color="black" />
+        <Fontisto name="bell-alt" size={24} color="black" />
       </View>
     </View>
   );
