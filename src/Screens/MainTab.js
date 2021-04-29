@@ -4,7 +4,7 @@ import HomeScreen from './main/Home';
 import EarningsScreen from './main/Earnings';
 import OrdersScreen from './main/Orders';
 import SettingScreen from './main/Settings';
-import {AntDesign} from '@expo/vector-icons';
+import {AntDesign, SimpleLineIcons, Feather} from '@expo/vector-icons';
 
 const MainTab = () => {
   const Tab = createBottomTabNavigator();
@@ -21,7 +21,8 @@ const MainTab = () => {
         options={{
           tabBarLabel: 'Home',
           tabBarIcon: ({color, size}) => (
-            <AntDesign name="stepforward" size={24} color="black" />
+            // <AntDesign name="stepforward" size={24} color="black" />
+            <SimpleLineIcons name="location-pin" size={24} color="#2baab2" />
           ),
         }}
       />
@@ -31,7 +32,7 @@ const MainTab = () => {
         options={{
           tabBarLabel: 'Earnings',
           tabBarIcon: ({color, size}) => (
-            <AntDesign name="stepforward" size={24} color="black" />
+            <Feather name="pie-chart" size={24} color="#2baab2" />
           ),
         }}
       />
@@ -41,7 +42,7 @@ const MainTab = () => {
         options={{
           tabBarLabel: 'Orders',
           tabBarIcon: ({color, size}) => (
-            <AntDesign name="stepforward" size={24} color="black" />
+            <Feather name="layers" size={24} color="#2baab2" />
           ),
         }}
       />
@@ -51,7 +52,7 @@ const MainTab = () => {
         options={{
           tabBarLabel: 'Setting',
           tabBarIcon: ({color, size}) => (
-            <AntDesign name="stepforward" size={24} color="black" />
+            <Feather name="settings" size={24} color="#2baab2" />
           ),
         }}
       />
