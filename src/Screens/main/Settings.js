@@ -1,12 +1,5 @@
 import React from 'react';
-import {
-  ScrollView,
-  TouchableOpacity,
-  Text,
-  StyleSheet,
-  View,
-} from 'react-native';
-import {Avatar} from 'react-native-elements';
+import {ScrollView, TouchableOpacity, Text, StyleSheet} from 'react-native';
 import {Container} from 'components';
 
 import HeaderSetting from '../../components/settings/HeaderSetting';
@@ -19,9 +12,6 @@ const Setting = () => {
         <TouchableOpacity style={styles.onlineStatus}>
           <Text style={styles.buttonText}>ONLINE</Text>
         </TouchableOpacity>
-        <View>
-          <Avatar rounded title="MD" />
-        </View>
       </ScrollView>
     </Container>
   );
