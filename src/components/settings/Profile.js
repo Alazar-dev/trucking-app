@@ -10,20 +10,25 @@ export default function Profile() {
       </View>
       <View style={{flex: 5, padding: 10}}>
         <View>
-          <Text style={styles.name}>{profileDetail.name}</Text>
-          <Text style={styles.job}>{profileDetail.job}</Text>
+          <Text style={styles.name}>{profileData.name}</Text>
+          <Text style={styles.job}>{profileData.job}</Text>
         </View>
-        <Text style={styles.email}>{profileDetail.email}</Text>
-        <Text style={styles.phone}>{profileDetail.phone}</Text>
+        <Text style={styles.email}>{profileData.email}</Text>
+        <Text style={styles.phone}>{profileData.phone}</Text>
+        <TouchableOpacity style={{marginTop: 5}}>
+          <Text style={{color: '#2baab2', marginTop: 5}}>Change Password</Text>
+        </TouchableOpacity>
       </View>
-      <View>
-        <Text>Edit</Text>
+      <View style={{marginTop: 5}}>
+        <TouchableOpacity>
+          <Text style={{color: '#2baab2'}}>Edit</Text>
+        </TouchableOpacity>
       </View>
     </View>
   );
 }
 
-const profileDetail = {
+const profileData = {
   name: 'Alejandro Lopez',
   job: 'KEY Driver',
   email: 'alejandro@gmail.com',
