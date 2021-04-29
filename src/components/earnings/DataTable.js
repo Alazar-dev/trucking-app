@@ -1,27 +1,42 @@
-import React from 'react';
+import React, {useState} from 'react';
 import {View, Text} from 'react-native';
+import {AntDesign} from '@expo/vector-icons';
+import {Picker} from '@react-native-picker/picker';
 
 export default function DataTable() {
+  const [selectedLanguage, setSelectedLanguage] = useState();
   return (
     <View>
       {history.map((total) => (
         <View
+          key={total.id}
           style={{
             flex: 1,
             flexDirection: 'row',
             padding: '3%',
             marginLeft: '5%',
           }}>
-          <View style={{height: '55%', flex: 6}}>
+          <View style={{height: '55%', flex: 7}}>
             <Text>{total.date}</Text>
             <Text>{total.trip}</Text>
           </View>
-          <View style={{flex: 10}} />
+          <View style={{flex: 15}} />
           <View style={{height: '55%', flex: 6}}>
             <Text style={{fontWeight: 'bold'}}>{total.earn}</Text>
           </View>
+          <View style={{flex: 2}}>
+            <AntDesign name="right" size={21} color="black" />
+          </View>
         </View>
       ))}
+      <Picker
+        selectedValue={selectedLanguage}
+        onValueChange={(itemValue, itemIndex) =>
+          setSelectedLanguage(itemValue)
+        }>
+        <Picker.Item label="Java" value="java" />
+        <Picker.Item label="JavaScript" value="js" />
+      </Picker>
     </View>
   );
 }
