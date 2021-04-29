@@ -11,7 +11,7 @@ const HeaderOrders = () => {
 
 const styles = StyleSheet.create({
   topText: {
-    padding: '20',
+    padding: 20,
     fontSize: 20,
     textAlign: 'center',
   },
