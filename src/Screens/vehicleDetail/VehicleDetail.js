@@ -8,7 +8,6 @@ import {
   KeyboardAvoidingView,
   ScrollView,
 } from 'react-native';
-import {Avatar} from 'react-native-elements';
 
 const VehicleDetail = (props) => {
   const [vehicleType, setVehicleType] = useState('');
@@ -30,12 +29,6 @@ const VehicleDetail = (props) => {
           <KeyboardAvoidingView enabled>
             <View style={{alignItems: 'center'}}>
               <Text style={styles.textHeader}>Vehicle detail</Text>
-
-              <Avatar
-                rounded
-                size="large"
-                source={require('../../assets/van.jpeg')}
-              />
             </View>
             <View style={styles.SectionStyle}>
               <TextInput
