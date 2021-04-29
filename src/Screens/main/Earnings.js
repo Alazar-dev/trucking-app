@@ -4,6 +4,7 @@ import {Container} from 'components';
 
 import HeaderEarnings from '../../components/earnings/HeaderEarnings';
 import EarningChart from '../../components/chart/EarningChart';
+import DataTable from '../../components/earnings/DataTable';
 
 const Cart = () => {
   return (
@@ -11,6 +12,7 @@ const Cart = () => {
       <HeaderEarnings />
       <ScrollView>
         <EarningChart />
+        <DataTable />
       </ScrollView>
     </Container>
   );
