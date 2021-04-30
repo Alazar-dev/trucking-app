@@ -4,7 +4,7 @@ import HomeScreen from './main/Home';
 import EarningsScreen from './main/Earnings';
 import OrdersScreen from './main/Orders';
 import SettingScreen from './main/Settings';
-import {AntDesign, SimpleLineIcons, Feather} from '@expo/vector-icons';
+import {SimpleLineIcons, Feather} from '@expo/vector-icons';
 
 const MainTab = () => {
   const Tab = createBottomTabNavigator();
@@ -21,7 +21,6 @@ const MainTab = () => {
         options={{
           tabBarLabel: 'Home',
           tabBarIcon: ({color, size}) => (
-            // <AntDesign name="stepforward" size={24} color="black" />
             <SimpleLineIcons name="location-pin" size={24} color="#2baab2" />
           ),
         }}
