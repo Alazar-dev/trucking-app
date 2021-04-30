@@ -15,6 +15,8 @@ import Document from './vehicleDetail/Document';
 import UserAgreementScreen from './UserAgreement';
 import AuthContext from 'helpers/AuthContext';
 import ProfileEdit from '../components/settings/profile/ProfileEdit';
+import ChangePassword from '../components/settings/profile/ChangePassword';
+import Vehicles from '../components/settings/Vehicles';
 
 const App = (props) => {
   const [loading, setLoading] = useState(true);
@@ -59,6 +61,9 @@ const App = (props) => {
           <Stack.Screen name="SignIn" component={SignInScreen} />
           <Stack.Screen name="UserAgreement" component={UserAgreementScreen} />
           <Stack.Screen name="ProfileEdit" component={ProfileEdit} />
+          <Stack.Screen name="ChangePassword" component={ChangePassword} />
+          <Stack.Screen name="Vehicles" component={Vehicles} />
+
           <Stack.Screen name="Home" component={MainTab} />
         </>
       )}
