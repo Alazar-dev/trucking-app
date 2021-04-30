@@ -46,10 +46,10 @@ const MainTab = () => {
         }}
       />
       <Tab.Screen
-        name="Setting"
+        name="Settings"
         component={SettingScreen}
         options={{
-          tabBarLabel: 'Setting',
+          tabBarLabel: 'Settings',
           tabBarIcon: ({color, size}) => (
             <Feather name="settings" size={24} color="#2baab2" />
           ),
