@@ -1,4 +1,4 @@
-import React, {useState, useContext, createRef} from 'react';
+import React, {useState, createRef} from 'react';
 import {
   View,
   TextInput,
