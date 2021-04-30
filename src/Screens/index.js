@@ -16,7 +16,8 @@ import UserAgreementScreen from './UserAgreement';
 import AuthContext from 'helpers/AuthContext';
 import ProfileEdit from '../components/settings/profile/ProfileEdit';
 import ChangePassword from '../components/settings/profile/ChangePassword';
-import Vehicles from '../components/settings/Vehicles';
+import Vehicles from '../components/settings/profile/pages/vehicles/Vehicles';
+import FriendInvitation from '../components/settings/profile/pages/FriendInvitaion';
 
 const App = (props) => {
   const [loading, setLoading] = useState(true);
@@ -63,6 +64,7 @@ const App = (props) => {
           <Stack.Screen name="ProfileEdit" component={ProfileEdit} />
           <Stack.Screen name="ChangePassword" component={ChangePassword} />
           <Stack.Screen name="Vehicles" component={Vehicles} />
+          <Stack.Screen name="FriendInvitation" component={FriendInvitation} />
 
           <Stack.Screen name="Home" component={MainTab} />
         </>
