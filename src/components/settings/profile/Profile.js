@@ -18,7 +18,9 @@ export default function Profile(props) {
         </View>
         <Text style={styles.email}>{profileData.email}</Text>
         <Text style={styles.phone}>{profileData.phone}</Text>
-        <TouchableOpacity style={{marginTop: 5}}>
+        <TouchableOpacity
+          onPress={() => props.navigation.navigate('ChangePassword')}
+          style={{marginTop: 5}}>
           <Text style={{color: '#2baab2', marginTop: 5}}>Change Password</Text>
         </TouchableOpacity>
       </View>
