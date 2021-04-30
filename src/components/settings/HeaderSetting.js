@@ -8,7 +8,7 @@ const HeaderSettings = () => {
       <View style={styles.container}>
         <View style={{flex: 6}} />
         <View style={{flex: 9}}>
-          <Text style={styles.topText}>Setting</Text>
+          <Text style={styles.topText}>Settings</Text>
         </View>
       </View>
       <View style={{flex: 1, flexDirection: 'row'}}>
