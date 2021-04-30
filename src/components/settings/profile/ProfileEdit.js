@@ -98,10 +98,10 @@ const ProfileEdit = (props) => {
               />
             </View>
             <TouchableOpacity
-              onPress={() => props.navigation.navigate('Setting')}
+              onPress={() => props.navigation.navigate('Settings')}
               style={styles.buttonStyle}
               activeOpacity={0.5}>
-              <Text style={styles.changePassword}>Change Password</Text>
+              <Text style={styles.changePassword}>Changed pwa</Text>
             </TouchableOpacity>
           </KeyboardAvoidingView>
         </View>
