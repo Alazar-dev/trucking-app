@@ -1,5 +1,5 @@
 import React from 'react';
-import {View, Text, TouchableOpacity, StyleSheet} from 'react-native';
+import {View, Text} from 'react-native';
 import {AntDesign} from '@expo/vector-icons';
 
 export default function ProfileDetail() {
@@ -23,8 +23,6 @@ export default function ProfileDetail() {
         </View>
       ))}
     </View>
-
-    // #767577
   );
 }
 
@@ -118,13 +116,3 @@ const personalData = [
     detail: 'View Order Details',
   },
 ];
-
-const styles = StyleSheet.create({
-  onlineStatus: {
-    backgroundColor: '#c9cdd4',
-  },
-  buttonText: {
-    padding: 10,
-    color: '#000',
-  },
-});
