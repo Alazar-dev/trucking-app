@@ -34,26 +34,32 @@ const personalData = [
   {
     id: 1,
     title: 'Bank Details',
+    page: 'Vehicles',
   },
   {
     id: 2,
     title: 'Invite to KEY',
+    page: 'FriendInvitation',
   },
   {
     id: 3,
     title: 'My Rating',
+    page: 'Vehicles',
   },
   {
     id: 4,
     title: 'Documents',
+    page: 'Vehicles',
   },
   {
     id: 5,
     title: 'Weakly Payout',
+    page: 'Vehicles',
   },
   {
     id: 6,
     title: 'About',
+    page: 'Vehicles',
   },
   {
     id: 7,
@@ -63,17 +69,21 @@ const personalData = [
   {
     id: 8,
     title: 'Podcasts',
+    page: 'Vehicles',
   },
   {
     id: 9,
     title: 'Fuel Tax Collector',
+    page: 'Vehicles',
   },
   {
     id: 10,
     title: 'Settings',
+    page: 'Vehicles',
   },
   {
     id: 11,
     title: 'Log out',
+    page: 'Vehicles',
   },
 ];
