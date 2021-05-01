@@ -49,7 +49,7 @@ const personalData = [
   {
     id: 4,
     title: 'Documents',
-    page: 'Vehicles',
+    page: 'Documents',
   },
   {
     id: 5,
