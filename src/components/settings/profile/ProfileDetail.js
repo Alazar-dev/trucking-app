@@ -59,7 +59,7 @@ const personalData = [
   {
     id: 6,
     title: 'About',
-    page: 'Vehicles',
+    page: 'About',
   },
   {
     id: 7,
@@ -79,7 +79,7 @@ const personalData = [
   {
     id: 10,
     title: 'Settings',
-    page: 'Vehicles',
+    page: 'NestedSetting',
   },
   {
     id: 11,
