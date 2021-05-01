@@ -44,7 +44,7 @@ const personalData = [
   {
     id: 3,
     title: 'My Rating',
-    page: 'Vehicles',
+    page: 'DriverRating',
   },
   {
     id: 4,
