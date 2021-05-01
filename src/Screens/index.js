@@ -20,6 +20,8 @@ import Vehicles from '../components/settings/profile/pages/vehicles/Vehicles';
 import FriendInvitation from '../components/settings/profile/pages/FriendInvitaion';
 import DriverRating from '../components/settings/profile/pages/DriverRating';
 import Documents from '../components/settings/profile/pages/Documents';
+import About from '../components/settings/profile/pages/About';
+import NestedSetting from '../components/settings/profile/pages/NestedSetting';
 
 const App = (props) => {
   const [loading, setLoading] = useState(true);
@@ -69,6 +71,8 @@ const App = (props) => {
           <Stack.Screen name="FriendInvitation" component={FriendInvitation} />
           <Stack.Screen name="DriverRating" component={DriverRating} />
           <Stack.Screen name="Documents" component={Documents} />
+          <Stack.Screen name="About" component={About} />
+          <Stack.Screen name="NestedSetting" component={NestedSetting} />
 
           <Stack.Screen name="Home" component={MainTab} />
         </>
