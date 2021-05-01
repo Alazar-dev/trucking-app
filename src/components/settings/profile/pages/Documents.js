@@ -70,7 +70,7 @@ export default function Documents(props) {
               <Text style={{color: '#000', fontSize: 20}}>
                 Commercial Vehicle Insurance
               </Text>
-              <Text style={{color: ' #595959', fontSize: 15}}>
+              <Text style={{color: '#595959', fontSize: 15}}>
                 Expiration 26/01/2019
               </Text>
             </View>
