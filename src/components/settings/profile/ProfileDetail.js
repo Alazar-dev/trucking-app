@@ -69,7 +69,7 @@ const personalData = [
   {
     id: 8,
     title: 'Podcasts',
-    page: 'Vehicles',
+    page: 'Podcast',
   },
   {
     id: 9,
