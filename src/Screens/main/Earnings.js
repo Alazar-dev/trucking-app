@@ -9,7 +9,7 @@ import DataTable from '../../components/earnings/DataTable';
 const Earnings = (props) => {
   return (
     <Container>
-      <HeaderEarnings />
+      <HeaderEarnings navigation={props.navigation} />
       <ScrollView>
         <EarningChart />
         <DataTable navigation={props.navigation} />
