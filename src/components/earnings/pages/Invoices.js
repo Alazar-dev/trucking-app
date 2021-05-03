@@ -155,7 +155,7 @@ export default function Invoices(props) {
           />
         </View>
         <TouchableOpacity
-          onPress={() => props.navigation.navigate('SMSVerify')}
+          onPress={() => props.navigation.navigate('InvoicesTwo')}
           style={styles.buttonStyle}
           activeOpacity={0.5}>
           <Text style={styles.buttonTextStyle}>NEXT</Text>
