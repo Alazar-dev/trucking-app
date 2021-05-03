@@ -7,18 +7,34 @@ import {
   ScrollView,
   TouchableOpacity,
 } from 'react-native';
+
+import {AntDesign} from '@expo/vector-icons';
 // import Camera from '../../components/Camera.js';
 
 const Document = (props) => {
   return (
     <View style={styles.mainBody}>
-      <ScrollView keyboardShouldPersistTaps="handled">
+      <View style={{flexDirection: 'row', margin: 20, marginBottom: 30}}>
+        <View style={{flex: 2}}>
+          <TouchableOpacity
+            onPress={() => props.navigation.navigate('VehicleDetail')}>
+            <AntDesign name="left" size={24} color="black" />
+          </TouchableOpacity>
+        </View>
+        <View style={{flex: 4}}>
+          <Text style={[styles.header, {fontSize: 20}]}>Document</Text>
+        </View>
+      </View>
+      <ScrollView
+        keyboardShouldPersistTaps="handled"
+        contentContainerStyle={{
+          flex: 1,
+          justifyContent: 'center',
+          alignContent: 'center',
+        }}>
         <KeyboardAvoidingView enabled>
-          <View style={{alignItems: 'center'}}>
-            <Text style={styles.mainText}>Document</Text>
-          </View>
           <View style={styles.body}>
-            <Text style={{textAlign: 'center'}}>
+            <Text style={{textAlign: 'center', fontSize: 20}}>
               One more thing and then you are done Attach your drivers Licence
             </Text>
             <TouchableOpacity>
@@ -29,44 +45,34 @@ const Document = (props) => {
               <Text style={styles.linkText}>ATTACH DOCUMENT</Text>
             </TouchableOpacity>
           </View>
-          <TouchableOpacity
-            style={styles.button}
-            onPress={() => props.navigation.navigate('Home')}>
-            <Text style={styles.buttonText}>DONE!</Text>
-          </TouchableOpacity>
         </KeyboardAvoidingView>
       </ScrollView>
+      <TouchableOpacity
+        style={styles.button}
+        onPress={() => props.navigation.navigate('Home')}>
+        <Text style={styles.buttonText}>DONE!</Text>
+      </TouchableOpacity>
     </View>
   );
 };
 
 const styles = StyleSheet.create({
   mainBody: {
-    marginTop: 30,
-    marginVertical: '0%',
-  },
-  mainText: {
-    color: '#000000',
-    fontSize: 30,
+    flex: 1,
+    justifyContent: 'center',
+    alignContent: 'center',
   },
   body: {
     justifyContent: 'center',
     alignItems: 'center',
-    flex: 2,
-    paddingTop: 50,
+    padding: 10,
   },
   button: {
     backgroundColor: '#20b2aa',
-    borderWidth: 0,
     color: '#FFFFFF',
-    borderColor: '#7DE24E',
-    height: 50,
     alignItems: 'center',
     borderRadius: 30,
-    marginLeft: 35,
-    marginRight: 35,
-    marginTop: 20,
-    marginBottom: 25,
+    margin: 35,
   },
   buttonText: {
     color: '#000000',
