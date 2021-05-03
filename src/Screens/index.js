@@ -24,6 +24,10 @@ import About from '../components/settings/profile/pages/About';
 import NestedSetting from '../components/settings/profile/pages/NestedSetting';
 import Podcast from '../components/settings/profile/pages/Podcast';
 import SMSVerify from './SMSVerify';
+import EarningsDetail from '../components/earnings/EarningsDetail';
+import PickupRequests from '../components/home/pages/PickupRequests';
+import OrderDetail from '../components/home/pages/OrderDetail.js';
+import OrderDetailBid from '../components/home/pages/OrderDetailBid.js';
 
 const App = (props) => {
   const [loading, setLoading] = useState(true);
@@ -77,6 +81,10 @@ const App = (props) => {
           <Stack.Screen name="NestedSetting" component={NestedSetting} />
           <Stack.Screen name="Podcast" component={Podcast} />
           <Stack.Screen name="SMSVerify" component={SMSVerify} />
+          <Stack.Screen name="EarningsDetail" component={EarningsDetail} />
+          <Stack.Screen name="PickupRequests" component={PickupRequests} />
+          <Stack.Screen name="OrderDetail" component={OrderDetail} />
+          <Stack.Screen name="OrderDetailBid" component={OrderDetailBid} />
 
           <Stack.Screen name="Home" component={MainTab} />
         </>
