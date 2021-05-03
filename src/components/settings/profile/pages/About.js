@@ -11,7 +11,7 @@ import {
 
 import {AntDesign} from '@expo/vector-icons';
 
-const Splash = (props) => {
+const About = (props) => {
   return (
     <View style={styles.mainBody}>
       <ScrollView
@@ -104,4 +104,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default Splash;
+export default About;
