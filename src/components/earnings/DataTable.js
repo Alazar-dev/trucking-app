@@ -1,32 +1,34 @@
 import React, {useState} from 'react';
-import {View, Text} from 'react-native';
+import {View, Text, TouchableOpacity} from 'react-native';
 import {AntDesign} from '@expo/vector-icons';
 import {Picker} from '@react-native-picker/picker';
 
-export default function DataTable() {
+export default function DataTable(props) {
   const [selectedLanguage, setSelectedLanguage] = useState();
   return (
     <View>
       {history.map((total) => (
-        <View
-          key={total.id}
-          style={{
-            flex: 1,
-            flexDirection: 'row',
-            padding: '3%',
-            marginLeft: '5%',
-          }}>
-          <View style={{height: '55%', flex: 7}}>
-            <Text>{total.date}</Text>
-            <Text>{total.trip}</Text>
-          </View>
-          <View style={{flex: 15}} />
-          <View style={{height: '55%', flex: 6}}>
-            <Text style={{fontWeight: 'bold'}}>{total.earn}</Text>
-          </View>
-          <View style={{flex: 2}}>
-            <AntDesign name="right" size={21} color="black" />
-          </View>
+        <View key={total.id}>
+          <TouchableOpacity
+            onPress={() => props.navigation.navigate('EarningsDetail')}
+            style={{
+              flex: 1,
+              flexDirection: 'row',
+              padding: '3%',
+              marginLeft: '5%',
+            }}>
+            <View style={{height: '55%', flex: 7}}>
+              <Text>{total.date}</Text>
+              <Text>{total.trip}</Text>
+            </View>
+            <View style={{flex: 15}} />
+            <View style={{height: '55%', flex: 6}}>
+              <Text style={{fontWeight: 'bold'}}>{total.earn}</Text>
+            </View>
+            <View style={{flex: 2}}>
+              <AntDesign name="right" size={21} color="black" />
+            </View>
+          </TouchableOpacity>
         </View>
       ))}
       <Picker
