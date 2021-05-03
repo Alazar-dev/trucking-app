@@ -6,16 +6,16 @@ import HeaderEarnings from '../../components/earnings/HeaderEarnings';
 import EarningChart from '../../components/chart/EarningChart';
 import DataTable from '../../components/earnings/DataTable';
 
-const Cart = () => {
+const Earnings = (props) => {
   return (
     <Container>
       <HeaderEarnings />
       <ScrollView>
         <EarningChart />
-        <DataTable />
+        <DataTable navigation={props.navigation} />
       </ScrollView>
     </Container>
   );
 };
 
-export default Cart;
+export default Earnings;
