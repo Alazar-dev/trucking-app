@@ -8,6 +8,7 @@ import {
   KeyboardAvoidingView,
   ScrollView,
 } from 'react-native';
+import {AntDesign} from '@expo/vector-icons';
 
 const VehicleDetail = (props) => {
   const [vehicleType, setVehicleType] = useState('');
@@ -27,8 +28,18 @@ const VehicleDetail = (props) => {
         }}>
         <View>
           <KeyboardAvoidingView enabled>
-            <View style={{alignItems: 'center'}}>
-              <Text style={styles.textHeader}>Vehicle detail</Text>
+            <View style={{flexDirection: 'row', margin: 20, marginBottom: 30}}>
+              <View style={{flex: 2}}>
+                <TouchableOpacity
+                  onPress={() => props.navigation.navigate('Home')}>
+                  <AntDesign name="left" size={24} color="black" />
+                </TouchableOpacity>
+              </View>
+              <View style={{flex: 4}}>
+                <Text style={[styles.header, {fontSize: 20}]}>
+                  Vehicle Detail
+                </Text>
+              </View>
             </View>
             <View style={styles.SectionStyle}>
               <TextInput

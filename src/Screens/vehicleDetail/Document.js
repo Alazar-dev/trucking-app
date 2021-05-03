@@ -7,6 +7,7 @@ import {
   ScrollView,
   TouchableOpacity,
 } from 'react-native';
+// import Camera from '../../components/Camera.js';
 
 const Document = (props) => {
   return (
@@ -22,6 +23,7 @@ const Document = (props) => {
             </Text>
             <TouchableOpacity>
               <Text style={styles.linkText}>TAKE A PICTURE</Text>
+              {/* <Camera /> */}
             </TouchableOpacity>
             <TouchableOpacity>
               <Text style={styles.linkText}>ATTACH DOCUMENT</Text>
