@@ -22,6 +22,8 @@ import DriverRating from '../components/settings/profile/pages/DriverRating';
 import Documents from '../components/settings/profile/pages/Documents';
 import About from '../components/settings/profile/pages/About';
 import NestedSetting from '../components/settings/profile/pages/NestedSetting';
+import Podcast from '../components/settings/profile/pages/Podcast';
+import SMSVerify from './SMSVerify';
 
 const App = (props) => {
   const [loading, setLoading] = useState(true);
@@ -73,6 +75,8 @@ const App = (props) => {
           <Stack.Screen name="Documents" component={Documents} />
           <Stack.Screen name="About" component={About} />
           <Stack.Screen name="NestedSetting" component={NestedSetting} />
+          <Stack.Screen name="Podcast" component={Podcast} />
+          <Stack.Screen name="SMSVerify" component={SMSVerify} />
 
           <Stack.Screen name="Home" component={MainTab} />
         </>
