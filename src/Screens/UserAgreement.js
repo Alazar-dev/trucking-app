@@ -38,15 +38,12 @@ const TermsAndConditions = (props) => {
             </Text>
           </View>
           <TouchableOpacity
-            onPress={() => props.navigation.navigate('Home')}
+            onPress={() => props.navigation.navigate('SMSVerify')}
             style={styles.buttonStyle}
             activeOpacity={0.5}>
             <Text style={styles.buttonTextStyle}>CONTINUE</Text>
           </TouchableOpacity>
-          <TouchableOpacity
-            onPress={() => props.navigation.navigate('Home')}
-            style={styles.buttonTwoStyle}
-            activeOpacity={0.5}>
+          <TouchableOpacity style={styles.buttonTwoStyle} activeOpacity={0.5}>
             <Text style={styles.buttonTextStyle}>I DON'T AGREE</Text>
           </TouchableOpacity>
         </KeyboardAvoidingView>
