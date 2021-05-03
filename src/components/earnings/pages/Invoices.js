@@ -87,7 +87,7 @@ export default function Invoices(props) {
         <View style={{flexDirection: 'row', padding: 20}}>
           {vehicles.map((vehicle) => {
             return (
-              <View style={{flex: 2}}>
+              <View key={vehicle.id} style={{flex: 2}}>
                 <Avatar.Image size={60} source={vehicle.img} />
                 <Text style={{color: '#c9cdd4'}}>{vehicle.mile}</Text>
                 <Text>{vehicle.name}</Text>
@@ -95,6 +95,71 @@ export default function Invoices(props) {
             );
           })}
         </View>
+        <View style={{width: '50%'}}>
+          <View style={{paddingTop: 20, paddingHorizontal: 20}}>
+            <Text>Vehicle amenities</Text>
+            <TextInput
+              placeholder="View All"
+              style={{
+                borderWidth: 1.5,
+                borderColor: '#c9cdd4',
+                borderRadius: 2,
+                height: 60,
+                padding: 10,
+              }}
+            />
+          </View>
+          <View style={{paddingHorizontal: 20}}>
+            <Text>Vehicle bed Type</Text>
+            <TextInput
+              placeholder="Breakable"
+              style={{
+                borderWidth: 1.5,
+                borderColor: '#c9cdd4',
+                borderRadius: 2,
+                height: 60,
+              }}
+            />
+          </View>
+        </View>
+        <View
+          style={{
+            paddingHorizontal: 50,
+            paddingVertical: 50,
+          }}>
+          <View style={{borderBottomWidth: 3, borderColor: '#c9cdd4'}} />
+        </View>
+        <View style={{paddingTop: 20, paddingHorizontal: 20}}>
+          <Text>Receiver Company name</Text>
+          <TextInput
+            placeholder="Enter receiver name"
+            style={{
+              borderWidth: 1.5,
+              borderColor: '#c9cdd4',
+              borderRadius: 2,
+              height: 60,
+            }}
+          />
+        </View>
+        <View style={{paddingHorizontal: 20}}>
+          <Text>Phone number</Text>
+          <TextInput
+            placeholder="Enter Phone number"
+            style={{
+              borderWidth: 1.5,
+              borderColor: '#c9cdd4',
+              borderRadius: 2,
+              height: 60,
+              padding: 10,
+            }}
+          />
+        </View>
+        <TouchableOpacity
+          onPress={() => props.navigation.navigate('SMSVerify')}
+          style={styles.buttonStyle}
+          activeOpacity={0.5}>
+          <Text style={styles.buttonTextStyle}>NEXT</Text>
+        </TouchableOpacity>
       </ScrollView>
     </View>
   );
@@ -111,6 +176,32 @@ const styles = StyleSheet.create({
   buttonText: {
     padding: 10,
     color: '#000',
+  },
+  buttonStyle: {
+    backgroundColor: '#20b2aa',
+    borderWidth: 0,
+    color: '#FFFFFF',
+    borderColor: '#7DE24E',
+    height: 40,
+    alignItems: 'center',
+    borderRadius: 30,
+    marginLeft: 35,
+    marginRight: 35,
+    marginTop: 20,
+    marginBottom: 25,
+  },
+  buttonTwoStyle: {
+    borderWidth: 0,
+    color: '#FFFFFF',
+    alignItems: 'center',
+    marginLeft: 35,
+    marginRight: 35,
+    marginBottom: 30,
+  },
+  buttonTextStyle: {
+    color: '#000000',
+    paddingVertical: 10,
+    fontSize: 18,
   },
 });
 
