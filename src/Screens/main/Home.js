@@ -21,7 +21,7 @@ const Home = (props) => {
       <HeaderHome />
       <Map />
       <WelcomeModal />
-      <Status />
+      <Status navigation={props.navigation} />
     </View>
   );
 };
