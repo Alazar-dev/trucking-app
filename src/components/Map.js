@@ -4,7 +4,7 @@ import MapView, {PROVIDER_GOOGLE} from 'react-native-maps';
 
 const styles = StyleSheet.create({
   map: {
-    height: '86%',
+    height: '82%',
   },
 });
 
