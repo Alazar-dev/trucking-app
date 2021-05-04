@@ -7,9 +7,10 @@ import {
   StyleSheet,
 } from 'react-native';
 import HeaderOrders from '../../components/orders/HeaderOrders';
-import DataTable from '../../components/orders/DataTable';
+import DataTable from '../../components/orders/OrdersData';
+import OrdersAndDetails from '../../components/orders/OrdersAndDetails';
 
-const Orders = () => {
+const Orders = (props) => {
   return (
     <View>
       <ScrollView>
@@ -17,7 +18,8 @@ const Orders = () => {
         <TouchableOpacity style={styles.onlineStatus}>
           <Text style={styles.buttonText}>Today</Text>
         </TouchableOpacity>
-        <DataTable />
+        {/* <DataTable /> */}
+        <OrdersAndDetails navigation={props.navigation} />
       </ScrollView>
     </View>
   );
