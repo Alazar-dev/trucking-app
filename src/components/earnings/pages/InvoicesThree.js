@@ -25,6 +25,7 @@ export default function InvoicesThree(props) {
           </View>
         </View>
         <View style={{padding: 20}}>
+          <Text>Send to</Text>
           <TextInput
             placeholder="Enter offer price"
             style={{
@@ -35,10 +36,10 @@ export default function InvoicesThree(props) {
             }}
           />
           <TouchableOpacity
-            onPress={() => props.navigation.navigate('InvoicesFour')}
+            onPress={() => props.navigation.navigate('Orders')}
             style={styles.buttonStyle}
             activeOpacity={0.5}>
-            <Text style={styles.buttonTextStyle}>NEXT</Text>
+            <Text style={styles.buttonTextStyle}>Send Invoice</Text>
           </TouchableOpacity>
         </View>
       </ScrollView>
