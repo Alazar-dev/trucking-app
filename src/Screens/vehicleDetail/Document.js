@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import {
   View,
   Text,
@@ -9,9 +9,11 @@ import {
 } from 'react-native';
 
 import {AntDesign} from '@expo/vector-icons';
-// import Camera from '../../components/Camera.js';
+import Camera from '../../components/Camera';
 
 const Document = (props) => {
+  const [showCamera, setShowCamera] = useState(false);
+  const onClick = () => setShowCamera(true);
   return (
     <View style={styles.mainBody}>
       <View style={{flexDirection: 'row', margin: 20, marginBottom: 30}}>
@@ -37,9 +39,9 @@ const Document = (props) => {
             <Text style={{textAlign: 'center', fontSize: 20}}>
               One more thing and then you are done Attach your drivers Licence
             </Text>
-            <TouchableOpacity>
+            <TouchableOpacity onPress={onClick}>
+              {showCamera ? <Camera /> : null}
               <Text style={styles.linkText}>TAKE A PICTURE</Text>
-              {/* <Camera /> */}
             </TouchableOpacity>
             <TouchableOpacity>
               <Text style={styles.linkText}>ATTACH DOCUMENT</Text>
