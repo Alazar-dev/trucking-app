@@ -11,28 +11,14 @@ import {
 const Status = (props) => {
   const [isEnabled, setIsEnabled] = useState(false);
   const [isEnabledTwo, setIsEnabledTwo] = useState(false);
+  const [seeAll, setSeeAll] = useState(false);
 
   const toggleSwitch = () => setIsEnabled((previousState) => !previousState);
   const toggleSwitchTwo = () =>
     setIsEnabledTwo((previousState) => !previousState);
-
   return (
     <View style={styles.container}>
-      <View>
-        <TouchableOpacity
-          style={{backgroundColor: '#2baab2'}}
-          onPress={() => props.navigation.navigate('PickupRequests')}>
-          <Text
-            style={{
-              textAlign: 'center',
-              fontSize: 18,
-              padding: 5,
-              color: '#fff',
-            }}>
-            See all requests
-          </Text>
-        </TouchableOpacity>
-      </View>
+      <View>{isEnabledTwo ? <SeeAllRequests /> : null}</View>
       <View style={{flexDirection: 'row'}}>
         <View style={{flex: 6}}>
           <Text style={{color: '#2baab2'}}>Your Status</Text>
@@ -75,3 +61,21 @@ const styles = StyleSheet.create({
 });
 
 export default Status;
+
+const SeeAllRequests = (props) => {
+  return (
+    <TouchableOpacity
+      style={{backgroundColor: '#2baab2'}}
+      onPress={() => props.navigation.navigate('PickupRequests')}>
+      <Text
+        style={{
+          textAlign: 'center',
+          fontSize: 18,
+          padding: 5,
+          color: '#fff',
+        }}>
+        See all requests
+      </Text>
+    </TouchableOpacity>
+  );
+};
