@@ -60,7 +60,8 @@ export default function PickupRequests(props) {
                       See Detail
                     </Text>
                   </TouchableOpacity>
-                  <TouchableOpacity>
+                  <TouchableOpacity
+                    onPress={() => props.navigation.navigate('OrderDetailBid')}>
                     <Text
                       style={[
                         {fontSize: 18, backgroundColor: '#2baab2'},
