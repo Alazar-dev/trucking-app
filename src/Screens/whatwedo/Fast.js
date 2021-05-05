@@ -1,27 +1,15 @@
-import React, {useState, useContext, createRef} from 'react';
+import React from 'react';
 import {
   View,
-  TextInput,
   TouchableOpacity,
   Text,
   StyleSheet,
-  Button,
   Image,
   KeyboardAvoidingView,
-  Keyboard,
   ScrollView,
 } from 'react-native';
-import AuthContext from 'helpers/AuthContext';
 
 const WhatWeDo = (props) => {
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
-  const [errortext, setErrortext] = useState('');
-  const [loading, setLoadign] = useState('');
-  const passwordInputRef = createRef();
-
-  const {signIn} = useContext(AuthContext);
-
   return (
     <View style={styles.mainBody}>
       {/* <Loader loading={loading} /> */}
