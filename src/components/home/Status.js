@@ -1,24 +1,18 @@
 import React, {useState} from 'react';
-import {
-  StyleSheet,
-  Text,
-  View,
-  Switch,
-  TouchableOpacity,
-  ScrollView,
-} from 'react-native';
+import {StyleSheet, Text, View, Switch, TouchableOpacity} from 'react-native';
 
 const Status = (props) => {
   const [isEnabled, setIsEnabled] = useState(false);
   const [isEnabledTwo, setIsEnabledTwo] = useState(false);
-  const [seeAll, setSeeAll] = useState(false);
 
   const toggleSwitch = () => setIsEnabled((previousState) => !previousState);
   const toggleSwitchTwo = () =>
     setIsEnabledTwo((previousState) => !previousState);
   return (
     <View style={styles.container}>
-      <View>{isEnabledTwo ? <SeeAllRequests /> : null}</View>
+      <View>
+        {isEnabledTwo ? <SeeAllRequests navigation={props.navigation} /> : null}
+      </View>
       <View style={{flexDirection: 'row'}}>
         <View style={{flex: 6}}>
           <Text style={{color: '#2baab2'}}>Your Status</Text>
