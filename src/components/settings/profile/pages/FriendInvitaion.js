@@ -6,7 +6,7 @@ import {
   StyleSheet,
   ScrollView,
 } from 'react-native';
-import {AntDesign, FontAwesome} from '@expo/vector-icons';
+import {AntDesign} from '@expo/vector-icons';
 
 export default function Vehicles(props) {
   return (
@@ -29,7 +29,6 @@ export default function Vehicles(props) {
           <Text
             style={{
               textAlign: 'center',
-              fontWeight: 'bold',
               fontSize: 19,
               padding: 20,
             }}>
@@ -40,13 +39,15 @@ export default function Vehicles(props) {
             new driver our coommunity gets stronger.
           </Text>
         </View>
-        {vehicles.map((vehicle) => {
+        {invitationMedias.map((invitation) => {
           return (
             <View
-              key={vehicle.id}
+              key={invitation.id}
               style={{flexDirection: 'row', paddingHorizontal: 10}}>
               <View style={{flex: 3, paddingVertical: 10}}>
-                <Text style={styles.notification}>{vehicle.name}</Text>
+                <TouchableOpacity>
+                  <Text style={styles.notification}>{invitation.name}</Text>
+                </TouchableOpacity>
               </View>
             </View>
           );
@@ -77,23 +78,17 @@ const styles = StyleSheet.create({
   },
 });
 
-const vehicles = [
+const invitationMedias = [
   {
     id: 1,
     name: 'SMS',
-    photo: require('../../../../assets/freightliner.jpeg'),
-    type: '10ft Truck',
   },
   {
     id: 2,
     name: 'Twitter',
-    photo: require('../../../../assets/van.jpeg'),
-    type: '10ft Truck',
   },
   {
     id: 3,
     name: 'Facebook',
-    photo: require('../../../../assets/van.jpeg'),
-    type: '10ft Truck',
   },
 ];
