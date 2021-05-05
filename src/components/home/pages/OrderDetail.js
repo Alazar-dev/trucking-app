@@ -108,7 +108,10 @@ export default function OrderDetail(props) {
           activeOpacity={0.5}>
           <Text style={styles.buttonTextStyle}>BID</Text>
         </TouchableOpacity>
-        <TouchableOpacity style={styles.buttonTwoStyle} activeOpacity={0.5}>
+        <TouchableOpacity
+          onPress={() => props.navigation.navigate('PickupRequests')}
+          style={styles.buttonTwoStyle}
+          activeOpacity={0.5}>
           <Text style={styles.buttonTextStyleTwo}>No Thanks</Text>
         </TouchableOpacity>
       </ScrollView>
