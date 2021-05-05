@@ -10,10 +10,12 @@ const Status = (props) => {
     setIsEnabledTwo((previousState) => !previousState);
   return (
     <View style={styles.container}>
-      <View>
-        {isEnabledTwo ? <SeeAllRequests navigation={props.navigation} /> : null}
-      </View>
-      <View style={{flexDirection: 'row'}}>
+      {isEnabledTwo ? (
+        <SeeAllRequests navigation={props.navigation} />
+      ) : (
+        <View style={{height: 22}} />
+      )}
+      <View style={{flexDirection: 'row', paddingHorizontal: '5%'}}>
         <View style={{flex: 6}}>
           <Text style={{color: '#2baab2'}}>Your Status</Text>
           <Text>Online/Offline</Text>
@@ -50,7 +52,6 @@ const Status = (props) => {
 const styles = StyleSheet.create({
   container: {
     top: '-11%',
-    paddingHorizontal: '5%',
   },
 });
 
@@ -65,7 +66,7 @@ const SeeAllRequests = (props) => {
         style={{
           textAlign: 'center',
           fontSize: 18,
-          padding: 5,
+          // padding: 5,
           color: '#fff',
         }}>
         See all requests
