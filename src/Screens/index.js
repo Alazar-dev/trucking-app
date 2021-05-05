@@ -32,8 +32,9 @@ import Invoices from '../components/earnings/pages/Invoices';
 import InvoicesTwo from '../components/earnings/pages/InvoicesTwo';
 import InvoicesThree from '../components/earnings/pages/InvoicesThree';
 import InvoicesFour from '../components/earnings/pages/InvoicesFour';
+import FuelTaxCollector from '../components/settings/profile/pages/FuelTaxCollector';
 
-const App = (props) => {
+const App = () => {
   const [loading, setLoading] = useState(true);
   const [user, setUser] = useState(null);
 
@@ -93,6 +94,7 @@ const App = (props) => {
           <Stack.Screen name="InvoicesTwo" component={InvoicesTwo} />
           <Stack.Screen name="InvoicesThree" component={InvoicesThree} />
           <Stack.Screen name="InvoicesFour" component={InvoicesFour} />
+          <Stack.Screen name="FuelTaxCollector" component={FuelTaxCollector} />
 
           <Stack.Screen name="Home" component={MainTab} />
         </>
