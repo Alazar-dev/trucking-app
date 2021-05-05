@@ -10,6 +10,7 @@ import {
 
 import {AntDesign} from '@expo/vector-icons';
 import Camera from '../../components/Camera';
+import DocumentPicker from '../../components/UploadDocument';
 
 const Document = (props) => {
   const [showCamera, setShowCamera] = useState(false);
@@ -41,11 +42,15 @@ const Document = (props) => {
             </Text>
             <TouchableOpacity onPress={onClick}>
               {showCamera ? <Camera /> : null}
-              <Text style={styles.linkText}>TAKE A PICTURE</Text>
+              <Text
+                style={{
+                  color: '#20b2aa',
+                  fontSize: 20,
+                }}>
+                TAKE A PICTURE
+              </Text>
             </TouchableOpacity>
-            <TouchableOpacity>
-              <Text style={styles.linkText}>ATTACH DOCUMENT</Text>
-            </TouchableOpacity>
+            <DocumentPicker />
           </View>
         </KeyboardAvoidingView>
       </ScrollView>
@@ -80,10 +85,6 @@ const styles = StyleSheet.create({
     color: '#000000',
     paddingVertical: 10,
     fontSize: 23,
-  },
-  linkText: {
-    color: '#20b2aa',
-    fontSize: 20,
   },
 });
 
