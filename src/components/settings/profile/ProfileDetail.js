@@ -74,7 +74,7 @@ const personalData = [
   {
     id: 9,
     title: 'Fuel Tax Collector',
-    page: 'Vehicles',
+    page: 'FuelTaxCollector',
   },
   {
     id: 10,
