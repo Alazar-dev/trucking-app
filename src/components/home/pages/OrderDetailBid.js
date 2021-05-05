@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react';
+import React, {useState} from 'react';
 import {
   View,
   Text,
@@ -13,9 +13,6 @@ import {Entypo} from '@expo/vector-icons';
 
 export default function OrderDetailBid(props) {
   const [bid, setBid] = useState('Send');
-  function nextPage() {
-    return props.navigation.navigate('Home');
-  }
   return (
     <View>
       <ScrollView>
@@ -122,7 +119,10 @@ export default function OrderDetailBid(props) {
           124$/mile
         </TextInput>
         <TouchableOpacity
-          onPress={() => setBid('Sent')}
+          onPress={() => {
+            setBid('Sent');
+            props.navigation.navigate('Home');
+          }}
           style={styles.buttonStyle}
           activeOpacity={0.5}>
           <Text style={styles.buttonTextStyle}>{bid}</Text>
