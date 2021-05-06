@@ -99,14 +99,15 @@ export default function Invoices(props) {
         </View>
         <View style={{width: '50%'}}>
           <View style={{paddingHorizontal: 20}}>
-            <Text>Vehicle bed Type</Text>
+            <Text>Vehicle Type</Text>
             <TextInput
-              placeholder="Breakable"
+              placeholder=""
               style={{
                 borderWidth: 1.5,
                 borderColor: '#c9cdd4',
-                borderRadius: 2,
-                height: 60,
+                borderRadius: 15,
+                height: 40,
+                padding: 10,
               }}
             />
           </View>
@@ -125,8 +126,9 @@ export default function Invoices(props) {
             style={{
               borderWidth: 1.5,
               borderColor: '#c9cdd4',
-              borderRadius: 2,
+              borderRadius: 15,
               height: 60,
+              padding: 10,
             }}
           />
         </View>
@@ -137,7 +139,7 @@ export default function Invoices(props) {
             style={{
               borderWidth: 1.5,
               borderColor: '#c9cdd4',
-              borderRadius: 2,
+              borderRadius: 15,
               height: 60,
               padding: 10,
             }}
