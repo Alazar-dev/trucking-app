@@ -27,7 +27,6 @@ import OrderDetail from '../components/home/pages/OrderDetail';
 import OrderDetailBid from '../components/home/pages/OrderDetailBid';
 import Invoices from '../components/earnings/pages/Invoices';
 import InvoicesTwo from '../components/earnings/pages/InvoicesTwo';
-import InvoicesThree from '../components/earnings/pages/InvoicesThree';
 import InvoicesFour from '../components/earnings/pages/InvoicesFour';
 import FuelTaxCollector from '../components/settings/profile/pages/FuelTaxCollector';
 
@@ -86,7 +85,6 @@ const App = () => {
           <Stack.Screen name="OrderDetailBid" component={OrderDetailBid} />
           <Stack.Screen name="Invoices" component={Invoices} />
           <Stack.Screen name="InvoicesTwo" component={InvoicesTwo} />
-          <Stack.Screen name="InvoicesThree" component={InvoicesThree} />
           <Stack.Screen name="InvoicesFour" component={InvoicesFour} />
           <Stack.Screen name="FuelTaxCollector" component={FuelTaxCollector} />
 
