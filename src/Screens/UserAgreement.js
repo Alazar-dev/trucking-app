@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import {
   View,
   Text,
@@ -6,8 +6,10 @@ import {
   TouchableOpacity,
   ScrollView,
   KeyboardAvoidingView,
+  CheckBox,
 } from 'react-native';
 const TermsAndConditions = (props) => {
+  const [isSelected, setSelection] = useState(false);
   return (
     <View>
       <ScrollView>
@@ -37,15 +39,27 @@ const TermsAndConditions = (props) => {
               vehicula, id cursus odio aliquam.
             </Text>
           </View>
-          <TouchableOpacity
-            onPress={() => props.navigation.navigate('SMSVerify')}
-            style={styles.buttonStyle}
-            activeOpacity={0.5}>
-            <Text style={styles.buttonTextStyle}>CONTINUE</Text>
-          </TouchableOpacity>
-          <TouchableOpacity style={styles.buttonTwoStyle} activeOpacity={0.5}>
-            <Text style={styles.buttonTextStyle}>I DON'T AGREE</Text>
-          </TouchableOpacity>
+          <View style={{flexDirection: 'row', marginLeft: '25%'}}>
+            <View style={{flex: 1, marginLeft: 30}}>
+              <CheckBox
+                value={isSelected}
+                onValueChange={setSelection}
+                style={styles.checkbox}
+              />
+            </View>
+            <View style={{flex: 6}}>
+              <Text style={{fontSize: 20}}>I Agree</Text>
+            </View>
+          </View>
+          {isSelected ? (
+            <TouchableOpacity
+              disabled={false}
+              onPress={() => props.navigation.navigate('SMSVerify')}
+              style={styles.buttonStyle}
+              activeOpacity={0.5}>
+              <Text style={styles.buttonTextStyle}>CONTINUE</Text>
+            </TouchableOpacity>
+          ) : null}
         </KeyboardAvoidingView>
       </ScrollView>
     </View>
@@ -78,14 +92,6 @@ const styles = StyleSheet.create({
     marginTop: 20,
     marginBottom: 25,
     justifyContent: 'center',
-  },
-  buttonTwoStyle: {
-    borderWidth: 0,
-    color: '#FFFFFF',
-    alignItems: 'center',
-    marginLeft: 35,
-    marginRight: 35,
-    marginBottom: 30,
   },
   buttonTextStyle: {
     color: '#000000',
