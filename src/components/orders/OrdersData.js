@@ -7,13 +7,20 @@ import {
   ScrollView,
 } from 'react-native';
 
-export default function PickupRequests(props) {
+export default function PickupRequests() {
   return (
     <View>
       <ScrollView>
         {vehicles.map((vehicle) => {
           return (
-            <View key={vehicle.id} style={{flexDirection: 'row', padding: 10}}>
+            <View
+              key={vehicle.id}
+              style={{
+                flexDirection: 'row',
+                padding: 10,
+                borderBottomWidth: 1,
+                borderBottomColor: '#9e9e9e',
+              }}>
               <View style={{flex: 4}}>
                 <Text style={{fontSize: 18, color: '#20b2aa'}}>
                   {vehicle.company}
