@@ -32,8 +32,9 @@ export default function Invoices(props) {
             style={{
               borderWidth: 1.5,
               borderColor: '#c9cdd4',
-              borderRadius: 2,
-              height: 60,
+              borderRadius: 15,
+              height: 45,
+              padding: 10,
             }}
           />
         </View>
@@ -44,8 +45,8 @@ export default function Invoices(props) {
             style={{
               borderWidth: 1.5,
               borderColor: '#c9cdd4',
-              borderRadius: 2,
-              height: 60,
+              borderRadius: 15,
+              height: 45,
               padding: 10,
             }}
           />
@@ -65,8 +66,8 @@ export default function Invoices(props) {
               style={{
                 borderWidth: 1.5,
                 borderColor: '#c9cdd4',
-                borderRadius: 2,
-                height: 60,
+                borderRadius: 15,
+                height: 45,
                 padding: 10,
               }}
             />
@@ -78,8 +79,9 @@ export default function Invoices(props) {
               style={{
                 borderWidth: 1.5,
                 borderColor: '#c9cdd4',
-                borderRadius: 2,
-                height: 60,
+                borderRadius: 15,
+                height: 45,
+                padding: 10,
               }}
             />
           </View>
@@ -96,19 +98,6 @@ export default function Invoices(props) {
           })}
         </View>
         <View style={{width: '50%'}}>
-          <View style={{paddingTop: 20, paddingHorizontal: 20}}>
-            <Text>Vehicle amenities</Text>
-            <TextInput
-              placeholder="View All"
-              style={{
-                borderWidth: 1.5,
-                borderColor: '#c9cdd4',
-                borderRadius: 2,
-                height: 60,
-                padding: 10,
-              }}
-            />
-          </View>
           <View style={{paddingHorizontal: 20}}>
             <Text>Vehicle bed Type</Text>
             <TextInput
