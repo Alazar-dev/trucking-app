@@ -26,7 +26,7 @@ export default function PickupRequests(props) {
             </TouchableOpacity>
           </View>
           <View style={{flex: 11}}>
-            <Text style={styles.topText}>Pickup Results</Text>
+            <Text style={styles.topText}>Pickup Requests</Text>
           </View>
           <View style={{flex: 3}}>
             <Text style={styles.filter}>Filter</Text>
@@ -37,7 +37,12 @@ export default function PickupRequests(props) {
             return (
               <View
                 key={vehicle.id}
-                style={{flexDirection: 'row', padding: 10}}>
+                style={{
+                  flexDirection: 'row',
+                  padding: 10,
+                  borderBottomWidth: 1,
+                  borderBottomColor: '#9e9e9e',
+                }}>
                 <View style={{flex: 1}}>
                   <Avatar.Image size={30} source={vehicle.photo} />
                 </View>
