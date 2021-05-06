@@ -206,18 +206,18 @@ const vehicles = [
     id: 2,
     mile: '50$/mile',
     name: 'Dry Van',
-    img: require('../../../assets/van.jpeg'),
+    img: require('../../../assets/download.jpeg'),
   },
   {
     id: 3,
     mile: '50$/mile',
     name: 'Reefer',
-    img: require('../../../assets/van.jpeg'),
+    img: require('../../../assets/download1.jpeg'),
   },
   {
     id: 4,
     mile: '50$/mile',
     name: 'Flat Bed',
-    img: require('../../../assets/van.jpeg'),
+    img: require('../../../assets/download2.jpeg'),
   },
 ];
