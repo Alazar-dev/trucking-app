@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 import {TouchableOpacity, View, Modal, Text, StyleSheet} from 'react-native';
 import {useNavigation} from '@react-navigation/native';
 
-const WelcomeModal = (props) => {
+const WelcomeModal = () => {
   const navigation = useNavigation();
   const [modalVisible, setModalVisible] = useState(true);
 
@@ -22,7 +22,7 @@ const WelcomeModal = (props) => {
           </Text>
           <View
             style={{
-              marginTop: 40,
+              marginTop: 35,
             }}
           />
           <TouchableOpacity
@@ -47,18 +47,12 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
   modalView: {
-    margin: 20,
-    backgroundColor: 'white',
+    margin: 18,
+    backgroundColor: 'rgba(255, 255, 255, 0.8)',
     borderRadius: 20,
-    padding: 35,
+    padding: 28,
     alignItems: 'center',
     shadowColor: '#000',
-    shadowOffset: {
-      width: 0,
-      height: 2,
-    },
-    shadowOpacity: 0.25,
-    shadowRadius: 4,
     elevation: 5,
   },
   modalText: {
@@ -69,12 +63,9 @@ const styles = StyleSheet.create({
   paragraph: {
     textAlign: 'center',
   },
-  button: {
-    padding: 10,
-  },
   textStyle: {
     color: '#2196F3',
-    fontSize: 25,
+    fontSize: 23,
     textAlign: 'center',
   },
 });
