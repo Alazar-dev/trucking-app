@@ -38,7 +38,7 @@ const personalData = [
   },
   {
     id: 2,
-    title: 'Invite to KEY',
+    title: 'Invite a friend',
     page: 'FriendInvitation',
   },
   {
