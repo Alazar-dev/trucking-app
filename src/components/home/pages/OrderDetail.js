@@ -12,110 +12,113 @@ import {Entypo} from '@expo/vector-icons';
 
 export default function OrderDetail(props) {
   return (
-    <View>
-      <ScrollView>
-        <View style={{flexDirection: 'row', margin: 20, marginBottom: 30}}>
-          <View style={{flex: 2}}>
-            <TouchableOpacity
-              onPress={() => props.navigation.navigate('PickupRequests')}>
-              <AntDesign name="left" size={24} color="black" />
-            </TouchableOpacity>
+    <ScrollView>
+      <View
+        style={{
+          flexDirection: 'row',
+          margin: 20,
+          marginBottom: 31,
+        }}>
+        <View style={{flex: 2}}>
+          <TouchableOpacity
+            onPress={() => props.navigation.navigate('PickupRequests')}>
+            <AntDesign name="left" size={24} color="black" />
+          </TouchableOpacity>
+        </View>
+        <View style={{flex: 4}}>
+          <Text style={styles.header}>Order Detail</Text>
+        </View>
+      </View>
+      <View style={{flexDirection: 'row', padding: 10}}>
+        <View style={{flex: 1}}>
+          <Avatar.Image
+            size={30}
+            source={require('../../../assets/xyz.jpeg')}
+          />
+        </View>
+        <View style={{flex: 4}}>
+          <Text style={{fontSize: 18}}>XYZ Company</Text>
+        </View>
+      </View>
+      <View>
+        <View style={{flexDirection: 'row'}}>
+          <View>
+            <Entypo name="dot-single" size={60} color="green" />
           </View>
-          <View style={{flex: 4}}>
-            <Text style={styles.header}>Order Detail</Text>
+          <View style={{paddingVertical: 17}}>
+            <Text style={{color: '#767577', fontSize: 20}}>Pickup point</Text>
           </View>
         </View>
-        <View style={{flexDirection: 'row', padding: 10}}>
-          <View style={{flex: 1}}>
-            <Avatar.Image
-              size={30}
-              source={require('../../../assets/xyz.jpeg')}
-            />
+        <Text style={{marginLeft: 25, fontSize: 17, paddingHorizontal: 10}}>
+          2604 Washington Rd, Augusta , GA 30928
+        </Text>
+      </View>
+      <View>
+        <View style={{flexDirection: 'row'}}>
+          <View>
+            <Entypo name="dot-single" size={60} color="orange" />
           </View>
-          <View style={{flex: 4}}>
-            <Text style={{fontSize: 18}}>XYZ Company</Text>
-          </View>
-        </View>
-        <View>
-          <View style={{flexDirection: 'row'}}>
-            <View>
-              <Entypo name="dot-single" size={60} color="green" />
-            </View>
-            <View style={{paddingVertical: 17}}>
-              <Text style={{color: '#767577', fontSize: 20}}>Pickup point</Text>
-            </View>
-          </View>
-          <Text style={{marginLeft: 25, fontSize: 17, paddingHorizontal: 10}}>
-            2604 Washington Rd, Augusta , GA 30928
-          </Text>
-        </View>
-        <View>
-          <View style={{flexDirection: 'row'}}>
-            <View>
-              <Entypo name="dot-single" size={60} color="orange" />
-            </View>
-            <View style={{paddingVertical: 17}}>
-              <Text style={{color: '#767577', fontSize: 20}}>
-                Destination point
-              </Text>
-            </View>
-          </View>
-          <Text style={{marginLeft: 25, fontSize: 17, paddingHorizontal: 10}}>
-            2604 Washington Rd, Augusta , GA 30928
-          </Text>
-        </View>
-        <View style={{flexDirection: 'row', padding: 20}}>
-          <View style={{flex: 1}}>
-            <Text style={{fontSize: 18, color: '#767577'}}>Weight</Text>
-            <Text style={{fontSize: 18, color: '#000'}}>234kg</Text>
-          </View>
-          <View style={{flex: 2}}>
-            <Text style={{fontSize: 18, color: '#767577'}}>Load type</Text>
-            <TouchableOpacity>
-              <Text style={{fontSize: 18, color: '#000'}}>Breakable</Text>
-            </TouchableOpacity>
-          </View>
-        </View>
-        <View style={{flexDirection: 'row', padding: 20}}>
-          <View style={{flex: 2}}>
-            <Text style={{fontSize: 18, color: '#767577'}}>Weight</Text>
-            <Text style={{fontSize: 18, color: '#000'}}>234kg</Text>
-          </View>
-          <View style={{flex: 2}}>
-            <Text style={{fontSize: 18, color: '#767577'}}>Load type</Text>
-            <TouchableOpacity>
-              <Text style={{fontSize: 18, color: '#000'}}>Breakable</Text>
-            </TouchableOpacity>
-          </View>
-          <View style={{flex: 2}}>
-            <Text style={{fontSize: 18, color: '#767577'}}>Load type</Text>
-            <TouchableOpacity>
-              <Text style={{fontSize: 18, color: '#000'}}>Breakable</Text>
-            </TouchableOpacity>
-          </View>
-        </View>
-        <View style={{flexDirection: 'row', padding: 20}}>
-          <View style={{flex: 2}}>
-            <Text style={{fontSize: 18, color: '#767577'}}>Pick time</Text>
-            <Text style={{fontSize: 18, color: '#000'}}>
-              Scheduled for Jan 12, 1:30pm
+          <View style={{paddingVertical: 17}}>
+            <Text style={{color: '#767577', fontSize: 20}}>
+              Destination point
             </Text>
           </View>
         </View>
-        <TouchableOpacity
-          onPress={() => props.navigation.navigate('OrderDetailBid')}
-          style={styles.buttonStyle}
-          activeOpacity={0.5}>
-          <Text style={styles.buttonTextStyle}>BID</Text>
-        </TouchableOpacity>
-        <TouchableOpacity
-          onPress={() => props.navigation.navigate('PickupRequests')}
-          style={styles.buttonTwoStyle}
-          activeOpacity={0.5}>
-          <Text style={styles.buttonTextStyleTwo}>No Thanks</Text>
-        </TouchableOpacity>
-      </ScrollView>
-    </View>
+        <Text style={{marginLeft: 25, fontSize: 17, paddingHorizontal: 10}}>
+          2604 Washington Rd, Augusta , GA 30928
+        </Text>
+      </View>
+      <View style={{flexDirection: 'row', padding: 20}}>
+        <View style={{flex: 1}}>
+          <Text style={{fontSize: 18, color: '#767577'}}>Weight</Text>
+          <Text style={{fontSize: 18, color: '#000'}}>234kg</Text>
+        </View>
+        <View style={{flex: 2}}>
+          <Text style={{fontSize: 18, color: '#767577'}}>Load type</Text>
+          <TouchableOpacity>
+            <Text style={{fontSize: 18, color: '#000'}}>Breakable</Text>
+          </TouchableOpacity>
+        </View>
+      </View>
+      <View style={{flexDirection: 'row', padding: 20}}>
+        <View style={{flex: 2}}>
+          <Text style={{fontSize: 18, color: '#767577'}}>Weight</Text>
+          <Text style={{fontSize: 18, color: '#000'}}>234kg</Text>
+        </View>
+        <View style={{flex: 2}}>
+          <Text style={{fontSize: 18, color: '#767577'}}>Load type</Text>
+          <TouchableOpacity>
+            <Text style={{fontSize: 18, color: '#000'}}>Breakable</Text>
+          </TouchableOpacity>
+        </View>
+        <View style={{flex: 2}}>
+          <Text style={{fontSize: 18, color: '#767577'}}>Load type</Text>
+          <TouchableOpacity>
+            <Text style={{fontSize: 18, color: '#000'}}>Breakable</Text>
+          </TouchableOpacity>
+        </View>
+      </View>
+      <View style={{flexDirection: 'row', padding: 20}}>
+        <View style={{flex: 2}}>
+          <Text style={{fontSize: 18, color: '#767577'}}>Pick time</Text>
+          <Text style={{fontSize: 18, color: '#000'}}>
+            Scheduled for Jan 12, 1:30pm
+          </Text>
+        </View>
+      </View>
+      <TouchableOpacity
+        onPress={() => props.navigation.navigate('OrderDetailBid')}
+        style={styles.buttonStyle}
+        activeOpacity={0.5}>
+        <Text style={styles.buttonTextStyle}>BID</Text>
+      </TouchableOpacity>
+      <TouchableOpacity
+        onPress={() => props.navigation.navigate('PickupRequests')}
+        style={styles.buttonTwoStyle}
+        activeOpacity={0.5}>
+        <Text style={styles.buttonTextStyleTwo}>No Thanks</Text>
+      </TouchableOpacity>
+    </ScrollView>
   );
 }
 
