@@ -51,6 +51,7 @@ const SMSVerify = (props) => {
                   keyboardType="numeric"
                   returnKeyType="next"
                   maxLength={1}
+                  autoFocus={true}
                 />
               </View>
               <View style={styles.SectionStyle}>
@@ -70,7 +71,6 @@ const SMSVerify = (props) => {
                   keyboardType="numeric"
                   returnKeyType="next"
                   maxLength={1}
-                  autoFocus={true}
                 />
               </View>
               <View style={styles.SectionStyle}>
