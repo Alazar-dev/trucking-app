@@ -8,7 +8,7 @@ import {
   ScrollView,
 } from 'react-native';
 
-const Splash = (props) => {
+const Splash = () => {
   return (
     <View style={styles.mainBody}>
       <ScrollView
