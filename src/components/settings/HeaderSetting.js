@@ -1,6 +1,5 @@
 import React from 'react';
 import {View, Text, StyleSheet, TouchableOpacity} from 'react-native';
-import Clock from './Clock';
 
 const HeaderSettings = () => {
   return (
@@ -19,7 +18,9 @@ const HeaderSettings = () => {
         </View>
         <View style={{flex: 3, height: '1%'}}>
           <TouchableOpacity style={styles.onlineStatus}>
-            <Clock />
+            <Text style={{color: '#fff', height: 41, padding: 10}}>
+              7 hours
+            </Text>
           </TouchableOpacity>
         </View>
       </View>
