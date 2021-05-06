@@ -13,14 +13,18 @@ const Status = (props) => {
       {isEnabledTwo ? (
         <SeeAllRequests navigation={props.navigation} />
       ) : (
-        <View style={{height: 22}} />
+        <View style={{height: 21}} />
       )}
-      <View style={{flexDirection: 'row', paddingHorizontal: '5%'}}>
-        <View style={{flex: 6}}>
+      <View
+        style={{
+          flexDirection: 'row',
+          paddingHorizontal: '5%',
+        }}>
+        <View style={{flex: 1}}>
           <Text style={{color: '#2baab2'}}>Your Status</Text>
           <Text>Online/Offline</Text>
         </View>
-        <View style={{flex: 2}}>
+        <View style={{flex: 0, paddingRight: 10}}>
           <Switch
             style={{transform: [{scaleX: 1.4}, {scaleY: 1.4}]}}
             trackColor={{false: '#767577', true: '#2baab2'}}
@@ -30,11 +34,11 @@ const Status = (props) => {
             value={isEnabled}
           />
         </View>
-        <View style={{flex: 6}}>
+        <View style={{flex: 1, marginHorizontal: 3, alignItems: 'flex-start'}}>
           <Text style={{color: '#2baab2'}}>Accept +5 Miles?</Text>
           <Text>Yes/No</Text>
         </View>
-        <View style={{flex: 2}}>
+        <View style={{flex: 0, paddingLeft: 0, alignItems: 'flex-end'}}>
           <Switch
             style={{transform: [{scaleX: 1.4}, {scaleY: 1.4}]}}
             trackColor={{false: '#767577', true: '#2baab2'}}
