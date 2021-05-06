@@ -23,21 +23,25 @@ export default class HeaderHome extends Component {
             flexDirection: 'row',
           },
         ]}>
-        <View style={{flex: 3}}>
+        <View style={{flex: 2.5}}>
           <Feather name="message-circle" size={24} color="#20b2aa" />
         </View>
-        <View style={{flex: 7, marginTop: '-4%'}}>
+        <View style={{flex: 5, marginTop: '-4%'}}>
           <Picker
+            style={{
+              height: 50,
+              width: 159,
+              color: 'white',
+            }}
             selectedValue={this.state.vehicle}
             onValueChange={this.onValueChange}
-            mode="dialog"
-            textStyle={styles.pickerText}>
+            mode="dialog">
             <Picker.Item label="Freightliner" value="freightliner" />
-            <Picker.Item label="Toyota" value="toyota" />
+            <Picker.Item label="Volvo" value="toyota" />
           </Picker>
         </View>
-        <View style={{flex: 2}}>
-          <Fontisto name="bell-alt" size={24} color="black" />
+        <View style={{flex: 1, alignItems: 'center'}}>
+          <Fontisto name="bell" size={24} color="#2baab2" />
         </View>
       </View>
     );
