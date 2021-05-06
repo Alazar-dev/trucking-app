@@ -50,8 +50,8 @@ const Document = (props) => {
                 TAKE A PICTURE
               </Text>
             </TouchableOpacity>
-            <DocumentPicker />
           </View>
+          <DocumentPicker />
         </KeyboardAvoidingView>
       </ScrollView>
       <TouchableOpacity
