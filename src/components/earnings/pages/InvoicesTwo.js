@@ -4,17 +4,19 @@ import {
   Text,
   TouchableOpacity,
   StyleSheet,
-  TextInput,
   ScrollView,
   CheckBox,
 } from 'react-native';
 import {AntDesign} from '@expo/vector-icons';
-import {Avatar} from 'react-native-paper';
 import Calendar from '../../Calendar';
+
+console.disableYellowBox = true;
 
 export default function InvoicesTwo(props) {
   const [isSelected, setIsSelected] = useState(false);
   const [isSelectedTwo, setIsSelectedTwo] = useState(false);
+  const [date, setDate] = useState('09-10-2020');
+
   return (
     <View>
       <ScrollView>
@@ -30,7 +32,6 @@ export default function InvoicesTwo(props) {
           </View>
         </View>
         <View style={{paddingTop: 20, paddingHorizontal: 20}}>
-          <Text>Pick up time</Text>
           <View style={[styles.container, {flexDirection: 'row'}]}>
             <View style={[styles.checkboxContainer, {flex: 2}]}>
               <CheckBox
@@ -93,6 +94,8 @@ const styles = StyleSheet.create({
     marginRight: 35,
     marginTop: 20,
     marginBottom: 25,
+    bottom: 0,
+    left: 0,
   },
   buttonTwoStyle: {
     borderWidth: 0,
@@ -107,31 +110,14 @@ const styles = StyleSheet.create({
     paddingVertical: 10,
     fontSize: 18,
   },
+  title: {
+    textAlign: 'center',
+    fontSize: 20,
+    fontWeight: 'bold',
+    padding: 20,
+  },
+  datePickerStyle: {
+    width: 200,
+    marginTop: 20,
+  },
 });
-
-const vehicles = [
-  {
-    id: 1,
-    mile: '50$/mile',
-    name: 'Hot Shot',
-    img: require('../../../assets/van.jpeg'),
-  },
-  {
-    id: 2,
-    mile: '50$/mile',
-    name: 'Dry Van',
-    img: require('../../../assets/van.jpeg'),
-  },
-  {
-    id: 3,
-    mile: '50$/mile',
-    name: 'Reefer',
-    img: require('../../../assets/van.jpeg'),
-  },
-  {
-    id: 4,
-    mile: '50$/mile',
-    name: 'Flat Bed',
-    img: require('../../../assets/van.jpeg'),
-  },
-];
