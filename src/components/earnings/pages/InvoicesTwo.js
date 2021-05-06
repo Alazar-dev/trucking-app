@@ -1,11 +1,11 @@
-import React, {useState} from 'react';
+import React from 'react';
 import {
   View,
   Text,
   TouchableOpacity,
   StyleSheet,
   ScrollView,
-  CheckBox,
+  TextInput,
 } from 'react-native';
 import {AntDesign} from '@expo/vector-icons';
 import Calendar from '../../Calendar';
@@ -13,10 +13,6 @@ import Calendar from '../../Calendar';
 console.disableYellowBox = true;
 
 export default function InvoicesTwo(props) {
-  const [isSelected, setIsSelected] = useState(false);
-  const [isSelectedTwo, setIsSelectedTwo] = useState(false);
-  const [date, setDate] = useState('09-10-2020');
-
   return (
     <View>
       <ScrollView>
@@ -31,40 +27,29 @@ export default function InvoicesTwo(props) {
             <Text style={styles.header}>Send Invoices</Text>
           </View>
         </View>
-        <View style={{paddingTop: 20, paddingHorizontal: 20}}>
-          <View style={[styles.container, {flexDirection: 'row'}]}>
-            <View style={[styles.checkboxContainer, {flex: 2}]}>
-              <CheckBox
-                value={isSelected}
-                onValueChange={setIsSelected}
-                style={styles.checkbox}
-              />
-            </View>
-            <View style={{flex: 7, marginTop: 5}}>
-              <Text style={styles.label}>Urgent</Text>
-            </View>
-            <View style={[styles.checkboxContainer, {flex: 2}]}>
-              <CheckBox
-                value={isSelectedTwo}
-                onValueChange={setIsSelectedTwo}
-                style={styles.checkbox}
-              />
-            </View>
-            <View style={{flex: 6, marginTop: 5}}>
-              <Text style={styles.label}>Schedule</Text>
-            </View>
-          </View>
-        </View>
         <View style={{paddingHorizontal: 20}}>
           <Text>Pick a date</Text>
           <Calendar />
         </View>
-        <TouchableOpacity
-          onPress={() => props.navigation.navigate('InvoicesThree')}
-          style={styles.buttonStyle}
-          activeOpacity={0.5}>
-          <Text style={styles.buttonTextStyle}>NEXT</Text>
-        </TouchableOpacity>
+        <View style={{padding: 20}}>
+          <Text>Send to</Text>
+          <TextInput
+            placeholder="Enter offer price"
+            style={{
+              borderWidth: 1.5,
+              borderColor: '#c9cdd4',
+              borderRadius: 15,
+              height: '22%',
+              padding: 10,
+            }}
+          />
+          <TouchableOpacity
+            onPress={() => props.navigation.navigate('Orders')}
+            style={styles.buttonStyle}
+            activeOpacity={0.5}>
+            <Text style={styles.buttonTextStyle}>Send Invoice</Text>
+          </TouchableOpacity>
+        </View>
       </ScrollView>
     </View>
   );
@@ -83,11 +68,12 @@ const styles = StyleSheet.create({
     color: '#000',
   },
   buttonStyle: {
+    justifyContent: 'center',
     backgroundColor: '#20b2aa',
     borderWidth: 0,
     color: '#FFFFFF',
     borderColor: '#7DE24E',
-    height: 40,
+    height: 45,
     alignItems: 'center',
     borderRadius: 30,
     marginLeft: 35,
