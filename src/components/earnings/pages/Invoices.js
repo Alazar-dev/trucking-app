@@ -169,11 +169,10 @@ const styles = StyleSheet.create({
     color: '#000',
   },
   buttonStyle: {
+    justifyContent: 'center',
     backgroundColor: '#20b2aa',
-    borderWidth: 0,
-    color: '#FFFFFF',
     borderColor: '#7DE24E',
-    height: 40,
+    height: 43,
     alignItems: 'center',
     borderRadius: 30,
     marginLeft: 35,
