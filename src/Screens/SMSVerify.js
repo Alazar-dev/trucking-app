@@ -1,30 +1,22 @@
-import React, {useState, useContext, createRef} from 'react';
+import React, {useState, createRef} from 'react';
 import {
   View,
   TextInput,
   TouchableOpacity,
   Text,
   StyleSheet,
-  Button,
   Image,
   KeyboardAvoidingView,
   Keyboard,
   ScrollView,
 } from 'react-native';
-import AuthContext from 'helpers/AuthContext';
 
 const SMSVerify = (props) => {
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
   const [errortext, setErrortext] = useState('');
-  const [loading, setLoadign] = useState('');
   const passwordInputRef = createRef();
-
-  const {sMSVerify} = useContext(AuthContext);
 
   return (
     <View style={styles.mainBody}>
-      {/* <Loader loading={loading} /> */}
       <ScrollView
         keyboardShouldPersistTaps="handled"
         contentContainerStyle={{
@@ -58,6 +50,7 @@ const SMSVerify = (props) => {
                   autoCapitalize="none"
                   keyboardType="numeric"
                   returnKeyType="next"
+                  maxLength={1}
                 />
               </View>
               <View style={styles.SectionStyle}>
@@ -66,8 +59,8 @@ const SMSVerify = (props) => {
                   keyboardType="numeric"
                   ref={passwordInputRef}
                   onSubmitEditing={Keyboard.dismiss}
-                  secureTextEntry={true}
                   returnKeyType="next"
+                  maxLength={1}
                 />
               </View>
               <View style={styles.SectionStyle}>
@@ -76,6 +69,8 @@ const SMSVerify = (props) => {
                   autoCapitalize="none"
                   keyboardType="numeric"
                   returnKeyType="next"
+                  maxLength={1}
+                  autoFocus={true}
                 />
               </View>
               <View style={styles.SectionStyle}>
@@ -84,22 +79,12 @@ const SMSVerify = (props) => {
                   keyboardType="numeric"
                   ref={passwordInputRef}
                   onSubmitEditing={Keyboard.dismiss}
-                  secureTextEntry={true}
                   returnKeyType="next"
-                />
-              </View>
-              <View style={styles.SectionStyle}>
-                <TextInput
-                  style={styles.inputStyle}
-                  keyboardType="numeric"
-                  ref={passwordInputRef}
-                  onSubmitEditing={Keyboard.dismiss}
-                  secureTextEntry={true}
-                  returnKeyType="next"
+                  maxLength={1}
                 />
               </View>
             </View>
-            {errortext != '' ? (
+            {errortext !== '' ? (
               <Text style={styles.errorTextStyle}>{errortext}</Text>
             ) : null}
             <TouchableOpacity
@@ -135,13 +120,14 @@ const styles = StyleSheet.create({
     borderWidth: 0,
     color: '#FFFFFF',
     borderColor: '#7DE24E',
-    height: 40,
+    height: 50,
     alignItems: 'center',
     borderRadius: 30,
     marginLeft: 35,
     marginRight: 35,
     marginTop: 20,
     marginBottom: 25,
+    justifyContent: 'center',
   },
   buttonTextStyle: {
     color: '#FFFFFF',
@@ -153,6 +139,7 @@ const styles = StyleSheet.create({
     color: '#000000',
     paddingLeft: 15,
     paddingRight: 15,
+    textAlign: 'center',
   },
   registerTextStyle: {
     color: '#595959',
