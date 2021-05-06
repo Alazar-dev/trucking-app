@@ -154,6 +154,7 @@ const styles = StyleSheet.create({
     borderBottomWidth: 0.3,
   },
   buttonStyle: {
+    justifyContent: 'center',
     backgroundColor: '#20b2aa',
     borderWidth: 0,
     color: '#FFFFFF',
