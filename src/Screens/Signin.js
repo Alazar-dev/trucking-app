@@ -5,7 +5,6 @@ import {
   TouchableOpacity,
   Text,
   StyleSheet,
-  Button,
   Image,
   KeyboardAvoidingView,
   Keyboard,
@@ -17,7 +16,6 @@ const SignIn = (props) => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [errortext, setErrortext] = useState('');
-  const [loading, setLoadign] = useState('');
   const passwordInputRef = createRef();
 
   const {signIn} = useContext(AuthContext);
@@ -76,7 +74,7 @@ const SignIn = (props) => {
                 returnKeyType="next"
               />
             </View>
-            {errortext != '' ? (
+            {errortext !== '' ? (
               <Text style={styles.errorTextStyle}>{errortext}</Text>
             ) : null}
             <TouchableOpacity
@@ -112,13 +110,14 @@ const styles = StyleSheet.create({
     borderWidth: 0,
     color: '#FFFFFF',
     borderColor: '#7DE24E',
-    height: 40,
+    height: 50,
     alignItems: 'center',
     borderRadius: 30,
     marginLeft: 35,
     marginRight: 35,
     marginTop: 20,
     marginBottom: 25,
+    justifyContent: 'center',
   },
   buttonTextStyle: {
     color: '#FFFFFF',
