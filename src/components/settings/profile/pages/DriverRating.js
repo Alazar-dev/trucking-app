@@ -6,7 +6,7 @@ import {
   StyleSheet,
   ScrollView,
 } from 'react-native';
-import {AntDesign, FontAwesome} from '@expo/vector-icons';
+import {AntDesign} from '@expo/vector-icons';
 import ProgressCircle from 'react-native-progress-circle';
 
 export default function DriverRating(props) {
@@ -137,10 +137,5 @@ const completedTasks = [
     id: 1,
     amount: '2,450',
     time: 'Trips Completed',
-  },
-  {
-    id: 2,
-    amount: '504',
-    time: 'Negative Ratings',
   },
 ];
