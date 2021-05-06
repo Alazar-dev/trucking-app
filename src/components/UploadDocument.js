@@ -1,59 +1,54 @@
 import React from 'react';
-import DocumentPicker from 'react-native-document-picker';
-import {View, Text, TouchableOpacity} from 'react-native';
-// Pick a single file
-export default function UploadDocument() {
-  async function openDocumentFile() {
-    try {
-      const res = await DocumentPicker.pick({
-        type: [DocumentPicker.types.images],
-      });
-      console.log(
-        res.uri,
-        res.type, // mime type
-        res.name,
-        res.size,
-      );
-    } catch (err) {
-      if (DocumentPicker.isCancel(err)) {
-        // User cancelled the picker, exit any dialogs or menus and move on
-      } else {
-        throw err;
-      }
-    }
+import {StyleSheet, View, TouchableOpacity, Image} from 'react-native';
+import {DocumentPicker, ImagePicker} from 'expo';
 
-    // Pick multiple files
-    try {
-      const results = await DocumentPicker.pickMultiple({
-        type: [DocumentPicker.types.images],
-      });
-      for (const res of results) {
-        console.log(
-          res.uri,
-          res.type, // mime type
-          res.name,
-          res.size,
-        );
-      }
-    } catch (err) {
-      if (DocumentPicker.isCancel(err)) {
-        // User cancelled the picker, exit any dialogs or menus and move on
-      } else {
-        throw err;
-      }
+export default class App extends React.Component {
+  state = {
+    image: null,
+  };
+  _pickDocument = async () => {
+    let result = await DocumentPicker.getDocumentAsync({});
+    console.log(result);
+  };
+
+  _pickImage = async () => {
+    let result = await ImagePicker.launchImageLibraryAsync({
+      allowsEditing: true,
+      aspect: [4, 3],
+    });
+
+    console.log(result);
+
+    if (!result.cancelled) {
+      this.setState({image: result.uri});
     }
+  };
+
+  render() {
+    let {image} = this.state;
+    return (
+      <View style={styles.container}>
+        <TouchableOpacity
+          title="Select Document"
+          onPress={this._pickDocument}
+        />
+
+        <View style={{marginTop: 20}}>
+          <TouchableOpacity title="Select Image" onPress={this._pickImage} />
+          {image && (
+            <Image source={{uri: image}} style={{width: 200, height: 200}} />
+          )}
+        </View>
+      </View>
+    );
   }
-  return (
-    <View>
-      <TouchableOpacity onPress={() => openDocumentFile}>
-        <Text
-          style={{
-            color: '#20b2aa',
-            fontSize: 20,
-          }}>
-          ATTACH DOCUMENT
-        </Text>
-      </TouchableOpacity>
-    </View>
-  );
 }
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: '#fff',
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+});
