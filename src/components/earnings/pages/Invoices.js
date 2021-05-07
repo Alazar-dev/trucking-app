@@ -145,6 +145,19 @@ export default function Invoices(props) {
             }}
           />
         </View>
+        <View style={{paddingHorizontal: 20}}>
+          <Text>Email Address</Text>
+          <TextInput
+            placeholder="Enter email address"
+            style={{
+              borderWidth: 1.5,
+              borderColor: '#c9cdd4',
+              borderRadius: 15,
+              height: 60,
+              padding: 10,
+            }}
+          />
+        </View>
         <TouchableOpacity
           onPress={() => props.navigation.navigate('InvoicesTwo')}
           style={styles.buttonStyle}
