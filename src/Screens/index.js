@@ -29,6 +29,8 @@ import Invoices from '../components/earnings/pages/Invoices';
 import InvoicesTwo from '../components/earnings/pages/InvoicesTwo';
 import InvoicesFour from '../components/earnings/pages/InvoicesFour';
 import FuelTaxCollector from '../components/settings/profile/pages/FuelTaxCollector';
+import BankDetail from '../components/settings/profile/pages/BankDetail';
+import WeaklyPayout from '../components/settings/profile/pages/WeaklyPayout';
 
 const App = () => {
   const [loading, setLoading] = useState(true);
@@ -87,6 +89,8 @@ const App = () => {
           <Stack.Screen name="InvoicesTwo" component={InvoicesTwo} />
           <Stack.Screen name="InvoicesFour" component={InvoicesFour} />
           <Stack.Screen name="FuelTaxCollector" component={FuelTaxCollector} />
+          <Stack.Screen name="BankDetail" component={BankDetail} />
+          <Stack.Screen name="WeaklyPayout" component={WeaklyPayout} />
 
           <Stack.Screen name="Home" component={MainTab} />
         </>
