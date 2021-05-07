@@ -154,6 +154,7 @@ const styles = StyleSheet.create({
     marginRight: 35,
     margin: 10,
     borderBottomWidth: 0.3,
+    borderBottomColor: '#51515151',
   },
   buttonStyle: {
     justifyContent: 'center',
