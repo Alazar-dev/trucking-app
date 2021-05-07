@@ -12,6 +12,9 @@ export default function ProfileDetail(props) {
             flex: 1,
             padding: '3%',
             marginLeft: '5%',
+            marginRight: '5%',
+            borderBottomWidth: 1,
+            borderBottomColor: '#51515151',
           }}>
           <TouchableOpacity
             onPress={() => props.navigation.navigate(total.page)}>
@@ -19,7 +22,7 @@ export default function ProfileDetail(props) {
               <View style={{height: '55%', flex: 20}}>
                 <Text style={{color: '#000', fontSize: 20}}>{total.title}</Text>
               </View>
-              <View style={{height: '55%', flex: 5}}>
+              <View style={{height: '55%', flex: 2}}>
                 <AntDesign name="right" size={24} color="black" />
               </View>
             </View>
@@ -34,7 +37,7 @@ const personalData = [
   {
     id: 1,
     title: 'Bank Details',
-    page: 'Vehicles',
+    page: 'BankDetail',
   },
   {
     id: 2,
@@ -54,7 +57,7 @@ const personalData = [
   {
     id: 5,
     title: 'Weakly Payout',
-    page: 'Vehicles',
+    page: 'WeaklyPayout',
   },
   {
     id: 6,
@@ -84,6 +87,6 @@ const personalData = [
   {
     id: 11,
     title: 'Log out',
-    page: 'Vehicles',
+    page: 'SignIn',
   },
 ];
