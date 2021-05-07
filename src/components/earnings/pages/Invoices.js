@@ -9,6 +9,7 @@ import {
 } from 'react-native';
 import {AntDesign} from '@expo/vector-icons';
 import {Avatar} from 'react-native-paper';
+import VehicleType from './VehicleType';
 
 export default function Invoices(props) {
   return (
@@ -99,17 +100,8 @@ export default function Invoices(props) {
         </View>
         <View style={{width: '50%'}}>
           <View style={{paddingHorizontal: 20}}>
-            <Text>Vehicle Type</Text>
-            <TextInput
-              placeholder=""
-              style={{
-                borderWidth: 1.5,
-                borderColor: '#c9cdd4',
-                borderRadius: 15,
-                height: 40,
-                padding: 10,
-              }}
-            />
+            <Text>Vehicle Trailer Type</Text>
+            <VehicleType />
           </View>
         </View>
         <View
