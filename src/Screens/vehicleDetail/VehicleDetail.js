@@ -8,6 +8,7 @@ import {
   KeyboardAvoidingView,
   ScrollView,
 } from 'react-native';
+import {StatusBar} from 'expo-status-bar';
 import {AntDesign} from '@expo/vector-icons';
 
 const VehicleDetail = (props) => {
@@ -20,6 +21,7 @@ const VehicleDetail = (props) => {
 
   return (
     <View style={styles.mainBody}>
+      <StatusBar style={'light'} />
       <ScrollView
         keyboardShouldPersistTaps="handled"
         contentContainerStyle={{
