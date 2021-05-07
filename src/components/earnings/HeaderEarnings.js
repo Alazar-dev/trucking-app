@@ -1,9 +1,8 @@
-import React, {useState} from 'react';
+import React from 'react';
 import {View, Text, StyleSheet, TouchableOpacity} from 'react-native';
 // import {Picker} from '@react-native-community/picker';
 
 const HeaderEarnings = (props) => {
-  const [selectedValue, setSelectedValue] = useState('java');
   return (
     <View
       style={[
@@ -18,7 +17,7 @@ const HeaderEarnings = (props) => {
       </View>
       <View style={{flex: 5}}>
         <TouchableOpacity onPress={() => props.navigation.navigate('Invoices')}>
-          <Text>Send Invoice</Text>
+          <Text style={{marginTop: 4}}>Send Invoice</Text>
         </TouchableOpacity>
       </View>
     </View>
