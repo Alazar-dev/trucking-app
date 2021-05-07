@@ -1,4 +1,4 @@
-import React, {useState, useContext, createRef} from 'react';
+import React, {useState, createRef} from 'react';
 import {
   View,
   TextInput,
@@ -18,7 +18,7 @@ const SignIn = (props) => {
   const [errortext, setErrortext] = useState('');
   const passwordInputRef = createRef();
 
-  const {signIn} = useContext(AuthContext);
+  // const {signIn} = useContext(AuthContext);
 
   return (
     <View style={styles.mainBody}>
@@ -129,6 +129,9 @@ const styles = StyleSheet.create({
     color: '#000000',
     paddingLeft: 15,
     paddingRight: 15,
+    borderWidth: 1,
+    borderRadius: 10,
+    borderColor: '#51515151',
   },
   registerTextStyle: {
     color: '#20b2aa',
