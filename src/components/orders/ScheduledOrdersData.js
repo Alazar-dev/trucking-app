@@ -1,6 +1,5 @@
 import React from 'react';
 import {View, Text, TouchableOpacity, StyleSheet} from 'react-native';
-import {AntDesign} from '@expo/vector-icons';
 
 export default function OrdersData() {
   return (
@@ -11,8 +10,10 @@ export default function OrdersData() {
           style={{
             flex: 1,
             flexDirection: 'row',
-            padding: '3%',
-            marginLeft: '5%',
+            padding: '5%',
+            // marginLeft: '5%',
+            borderBottomWidth: 1,
+            borderBottomColor: '#9e9e9e',
           }}>
           <View style={{height: '55%', flex: 20}}>
             <Text style={{color: '#2baab2'}}>{total.company}</Text>
@@ -34,8 +35,7 @@ export default function OrdersData() {
           style={{
             flex: 1,
             flexDirection: 'row',
-            padding: '3%',
-            marginLeft: '5%',
+            padding: '5%',
           }}>
           <View style={{height: '55%', flex: 20}}>
             <Text style={{color: '#2baab2'}}>{total.company}</Text>
