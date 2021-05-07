@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useRef, useState} from 'react';
 import {
   View,
   Text,
@@ -10,8 +10,12 @@ import {
 import {AntDesign} from '@expo/vector-icons';
 import {Avatar} from 'react-native-paper';
 import VehicleType from './VehicleType';
+import PhoneInput from 'react-native-phone-number-input';
 
 export default function Invoices(props) {
+  const phoneInput = useRef();
+  const [value, setValue] = useState('');
+  const [formattedValue, setFormattedValue] = useState('');
   return (
     <View>
       <ScrollView>
@@ -126,16 +130,25 @@ export default function Invoices(props) {
         </View>
         <View style={{paddingHorizontal: 20}}>
           <Text>Phone number</Text>
-          <TextInput
-            placeholder="Enter Phone number"
+          <View
             style={{
-              borderWidth: 1.5,
-              borderColor: '#c9cdd4',
-              borderRadius: 15,
-              height: 60,
-              padding: 10,
-            }}
-          />
+              borderWidth: 1,
+              borderRadius: 10,
+              borderColor: '#51515151',
+            }}>
+            <PhoneInput
+              ref={phoneInput}
+              defaultValue={value}
+              defaultCode="DM"
+              layout="first"
+              onChangeText={(text) => {
+                setValue(text);
+              }}
+              onChangeFormattedText={(text) => {
+                setFormattedValue(text);
+              }}
+            />
+          </View>
         </View>
         <View style={{paddingHorizontal: 20}}>
           <Text>Email Address</Text>
