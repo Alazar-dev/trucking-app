@@ -34,7 +34,7 @@ export default function PickupRequests() {
               </View>
               <View style={{flex: 2}}>
                 <TouchableOpacity>
-                  <Text style={styles.status}>completed</Text>
+                  <Text style={styles.status}>{vehicle.status}</Text>
                 </TouchableOpacity>
                 <Text style={{fontSize: 18, textAlign: 'center'}}>
                   {vehicle.totalEarn}
@@ -54,36 +54,42 @@ const vehicles = [
     company: 'ABC trading - Order # 40',
     location: '24th Street, Peachtree, Atlanta, Georgia 40203',
     totalEarn: '150$',
+    status: 'completed',
   },
   {
     id: 2,
     company: 'XYZ Incorporated - Order # 41',
     location: '24th Street, Peachtree, Atlanta, Georgia 40203',
-    totalEarn: '150$',
+    totalEarn: '0$',
+    status: 'pending',
   },
   {
     id: 3,
     company: 'XYZ Incorporated - Order # 41',
     location: '24th Street, Peachtree, Atlanta, Georgia 40203',
-    totalEarn: '150$',
+    totalEarn: '30$',
+    status: 'completed',
   },
   {
     id: 4,
     company: 'XYZ Incorporated - Order # 41',
     location: '24th Street, Peachtree, Atlanta, Georgia 40203',
-    totalEarn: '150$',
+    totalEarn: '0$',
+    status: 'failed',
   },
   {
     id: 5,
     company: 'XYZ Incorporated - Order # 41',
     location: '24th Street, Peachtree, Atlanta, Georgia 40203',
-    totalEarn: '150$',
+    totalEarn: '2000$',
+    status: 'completed',
   },
   {
     id: 6,
     company: 'Alejandro Lopez',
     location: '24th Street, Peachtree, Atlanta, Georgia 40203',
-    totalEarn: '150$',
+    totalEarn: '0$',
+    status: 'pending',
   },
 ];
 
