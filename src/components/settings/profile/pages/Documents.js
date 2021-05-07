@@ -6,8 +6,7 @@ import {
   StyleSheet,
   ScrollView,
 } from 'react-native';
-import {AntDesign, FontAwesome} from '@expo/vector-icons';
-import ProgressCircle from 'react-native-progress-circle';
+import {AntDesign} from '@expo/vector-icons';
 
 export default function Documents(props) {
   return (
@@ -43,16 +42,73 @@ export default function Documents(props) {
           </View>
         </TouchableOpacity>
       </View>
+      <View style={styles.container}>
+        <TouchableOpacity onPress={() => props.navigation.navigate('Settings')}>
+          <View style={{flex: 1, flexDirection: 'row'}}>
+            <View style={{flex: 30}}>
+              <Text style={{color: '#000', fontSize: 20}}>
+                Business License
+              </Text>
+              <Text style={{color: '#595959', fontSize: 15}}>
+                Expiration 26/01/2019
+              </Text>
+            </View>
+            <View style={{height: '55%', flex: 3}}>
+              <AntDesign name="right" size={24} color="black" />
+            </View>
+          </View>
+        </TouchableOpacity>
+      </View>
+      <View style={styles.container}>
+        <TouchableOpacity onPress={() => props.navigation.navigate('Settings')}>
+          <View style={{flex: 1, flexDirection: 'row'}}>
+            <View style={{flex: 30}}>
+              <Text style={{color: '#000', fontSize: 20}}>DOT Number</Text>
+              <Text style={{color: '#595959', fontSize: 15}}>
+                Expiration 26/01/2019
+              </Text>
+            </View>
+            <View style={{height: '55%', flex: 3}}>
+              <AntDesign name="right" size={24} color="black" />
+            </View>
+          </View>
+        </TouchableOpacity>
+      </View>
+      <View style={styles.container}>
+        <TouchableOpacity onPress={() => props.navigation.navigate('Settings')}>
+          <View style={{flex: 1, flexDirection: 'row'}}>
+            <View style={{flex: 30}}>
+              <Text style={{color: '#000', fontSize: 20}}>MC Number</Text>
+              <Text style={{color: '#595959', fontSize: 15}}>
+                Expiration 26/01/2019
+              </Text>
+            </View>
+            <View style={{height: '55%', flex: 3}}>
+              <AntDesign name="right" size={24} color="black" />
+            </View>
+          </View>
+        </TouchableOpacity>
+      </View>
       <TouchableOpacity style={styles.onlineStatus}>
-        <Text style={styles.buttonText}>Toyota Prius</Text>
+        <Text style={styles.buttonText}>Vehicles</Text>
       </TouchableOpacity>
       <View style={styles.container}>
         <TouchableOpacity onPress={() => props.navigation.navigate('Settings')}>
           <View style={{flex: 1, flexDirection: 'row'}}>
             <View style={{flex: 30}}>
-              <Text style={{color: '#000', fontSize: 20}}>
-                Driver's License
-              </Text>
+              <Text style={{color: '#000', fontSize: 20}}>Registration</Text>
+            </View>
+            <View style={{height: '55%', flex: 3}}>
+              <AntDesign name="right" size={24} color="black" />
+            </View>
+          </View>
+        </TouchableOpacity>
+      </View>
+      <View style={styles.container}>
+        <TouchableOpacity onPress={() => props.navigation.navigate('Settings')}>
+          <View style={{flex: 1, flexDirection: 'row'}}>
+            <View style={{flex: 30}}>
+              <Text style={{color: '#000', fontSize: 20}}>Insurance</Text>
               <Text style={{color: '#595959', fontSize: 15}}>
                 Expiration 26/01/2019
               </Text>
@@ -68,44 +124,7 @@ export default function Documents(props) {
           <View style={{flex: 1, flexDirection: 'row'}}>
             <View style={{flex: 30}}>
               <Text style={{color: '#000', fontSize: 20}}>
-                Commercial Vehicle Insurance
-              </Text>
-              <Text style={{color: '#595959', fontSize: 15}}>
-                Expiration 26/01/2019
-              </Text>
-            </View>
-            <View style={{height: '55%', flex: 3}}>
-              <AntDesign name="right" size={24} color="black" />
-            </View>
-          </View>
-        </TouchableOpacity>
-      </View>
-      <TouchableOpacity style={styles.onlineStatus}>
-        <Text style={styles.buttonText}>Freighliner</Text>
-      </TouchableOpacity>
-      <View style={styles.container}>
-        <TouchableOpacity onPress={() => props.navigation.navigate('Settings')}>
-          <View style={{flex: 1, flexDirection: 'row'}}>
-            <View style={{flex: 30}}>
-              <Text style={{color: '#000', fontSize: 20}}>
-                Driver's License
-              </Text>
-              <Text style={{color: '#595959', fontSize: 15}}>
-                Expiration 26/01/2019
-              </Text>
-            </View>
-            <View style={{height: '55%', flex: 3}}>
-              <AntDesign name="right" size={24} color="black" />
-            </View>
-          </View>
-        </TouchableOpacity>
-      </View>
-      <View style={styles.container}>
-        <TouchableOpacity onPress={() => props.navigation.navigate('Settings')}>
-          <View style={{flex: 1, flexDirection: 'row'}}>
-            <View style={{flex: 30}}>
-              <Text style={{color: '#000', fontSize: 20}}>
-                Commercial Vehicle Insurance
+                Trailor Insurance
               </Text>
               <Text style={{color: '#595959', fontSize: 15}}>
                 Expiration 26/01/2019
