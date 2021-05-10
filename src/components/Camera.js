@@ -43,9 +43,11 @@ export default function CameraComponent() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
+    marginLeft: -90
   },
   camera: {
     flex: 1,
+    width: '145%'
   },
   buttonContainer: {
     flex: 1,
