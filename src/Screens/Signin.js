@@ -10,7 +10,7 @@ import {
   Keyboard,
   ScrollView,
 } from 'react-native';
-import AuthContext from 'helpers/AuthContext';
+// import AuthContext from 'helpers/AuthContext';
 
 const SignIn = (props) => {
   const [email, setEmail] = useState('');
@@ -83,7 +83,10 @@ const SignIn = (props) => {
               activeOpacity={0.5}>
               <Text style={styles.buttonTextStyle}>Continue</Text>
             </TouchableOpacity>
-            <Text style={styles.registerTextStyle}>Forgot Password</Text>
+            <TouchableOpacity
+              onPress={() => props.navigation.navigate('ForgetPassword')}>
+              <Text style={styles.registerTextStyle}>Forgot Password</Text>
+            </TouchableOpacity>
           </KeyboardAvoidingView>
         </View>
       </ScrollView>
