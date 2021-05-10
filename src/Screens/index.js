@@ -6,6 +6,7 @@ import AsyncStorage from '@react-native-community/async-storage';
 import MainTab from './MainTab';
 import SplashScreen from './Splash';
 import SignInScreen from './Signin';
+import ForgetPassword from './ForgetPassword';
 import Intro from './Intro';
 import VehicleDetail from './vehicleDetail/VehicleDetail';
 import Document from './vehicleDetail/Document';
@@ -70,6 +71,7 @@ const App = () => {
           <Stack.Screen name="VehicleDetail" component={VehicleDetail} />
           <Stack.Screen name="Document" component={Document} />
           <Stack.Screen name="SignIn" component={SignInScreen} />
+          <Stack.Screen name="ForgetPassword" component={ForgetPassword} />
           <Stack.Screen name="UserAgreement" component={UserAgreementScreen} />
           <Stack.Screen name="ProfileEdit" component={ProfileEdit} />
           <Stack.Screen name="ChangePassword" component={ChangePassword} />
