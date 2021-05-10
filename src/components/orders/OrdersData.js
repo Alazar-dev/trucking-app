@@ -28,9 +28,11 @@ export default function PickupRequests() {
                 <Text style={{fontSize: 18, color: '#000'}}>
                   {vehicle.location}
                 </Text>
-                <Text style={{fontSize: 18, color: '#767577'}}>
-                  View order detail
-                </Text>
+                <TouchableOpacity>
+                  <Text style={{fontSize: 18, color: '#2baab2'}}>
+                    View order detail
+                  </Text>
+                </TouchableOpacity>
               </View>
               <View style={{flex: 2}}>
                 <TouchableOpacity>
