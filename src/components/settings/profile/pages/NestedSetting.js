@@ -7,7 +7,7 @@ import {
   ScrollView,
   Switch,
 } from 'react-native';
-import {AntDesign, FontAwesome} from '@expo/vector-icons';
+import {AntDesign} from '@expo/vector-icons';
 
 export default function NestedSetting(props) {
   const [googleEnabled, setGoogleEnable] = useState(false);
@@ -80,7 +80,7 @@ export default function NestedSetting(props) {
         <TouchableOpacity onPress={() => props.navigation.navigate('Settings')}>
           <View style={{flex: 1, flexDirection: 'row'}}>
             <View style={{flex: 30}}>
-              <Text style={{color: '#000', fontSize: 20}}>About KEY</Text>
+              <Text style={{color: '#000', fontSize: 20}}>About Us</Text>
             </View>
             <View style={{height: '55%', flex: 3}}>
               <AntDesign name="right" size={24} color="black" />
