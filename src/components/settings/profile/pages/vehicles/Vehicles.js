@@ -1,7 +1,7 @@
 import React from 'react';
-import {View, TouchableOpacity, Text, StyleSheet} from 'react-native';
+import {StyleSheet, Text, TouchableOpacity, View} from 'react-native';
 import {AntDesign} from '@expo/vector-icons';
-import {Avatar} from 'react-native-paper';
+// import {Avatar} from 'react-native-paper';
 
 export default function Vehicles(props) {
   return (
@@ -22,7 +22,7 @@ export default function Vehicles(props) {
         return (
           <View key={vehicle.id} style={{flexDirection: 'row', padding: 10}}>
             <View style={{flex: 2}}>
-              <Avatar.Image size={90} source={vehicle.photo} />
+              {/*<Avatar.Image size={90} source={vehicle.photo} />*/}
             </View>
             <View style={{flex: 3, paddingVertical: 20}}>
               <Text style={{fontSize: 20}}>{vehicle.name}</Text>

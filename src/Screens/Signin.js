@@ -10,7 +10,7 @@ import {
   Keyboard,
   ScrollView,
 } from 'react-native';
-import AuthContext from 'helpers/AuthContext';
+// import AuthContext from 'helpers/AuthContext';
 
 const SignIn = (props) => {
   const [email, setEmail] = useState('');

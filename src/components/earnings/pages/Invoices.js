@@ -1,14 +1,14 @@
 import React, {useRef, useState} from 'react';
 import {
-  View,
-  Text,
-  TouchableOpacity,
-  StyleSheet,
-  TextInput,
   ScrollView,
+  StyleSheet,
+  Text,
+  TextInput,
+  TouchableOpacity,
+  View,
 } from 'react-native';
 import {AntDesign} from '@expo/vector-icons';
-import {Avatar} from 'react-native-paper';
+// import {Avatar} from 'react-native-paper';
 import VehicleType from './VehicleType';
 import PhoneInput from 'react-native-phone-number-input';
 
@@ -95,7 +95,7 @@ export default function Invoices(props) {
           {vehicles.map((vehicle) => {
             return (
               <View key={vehicle.id} style={{flex: 2}}>
-                <Avatar.Image size={60} source={vehicle.img} />
+                {/*<Avatar.Image size={60} source={vehicle.img} />*/}
                 <Text style={{color: '#c9cdd4'}}>{vehicle.mile}</Text>
                 <Text>{vehicle.name}</Text>
               </View>

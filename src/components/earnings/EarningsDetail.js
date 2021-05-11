@@ -1,14 +1,14 @@
 import React from 'react';
 import {
-  View,
+  ScrollView,
+  StyleSheet,
   Text,
   TouchableOpacity,
-  StyleSheet,
-  ScrollView,
+  View,
 } from 'react-native';
-import {AntDesign} from '@expo/vector-icons';
-import {Avatar} from 'react-native-paper';
-import {Entypo} from '@expo/vector-icons';
+// import {Avatar} from 'react-native-paper';
+import {AntDesign, Entypo} from '@expo/vector-icons';
+
 export default function OrderDetail(props) {
   return (
     <View>
@@ -27,7 +27,7 @@ export default function OrderDetail(props) {
         </View>
         <View style={{flexDirection: 'row', padding: 10}}>
           <View style={{flex: 1}}>
-            <Avatar.Image size={50} source={require('../../assets/xyz.jpeg')} />
+            {/*<Avatar.Image size={50} source={require('../../assets/xyz.jpeg')} />*/}
           </View>
           <View style={{flex: 4}}>
             <Text style={{fontSize: 25}}>XYZ Company</Text>

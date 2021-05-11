@@ -10,7 +10,7 @@ import Intro from './Intro';
 import VehicleDetail from './vehicleDetail/VehicleDetail';
 import Document from './vehicleDetail/Document';
 import UserAgreementScreen from './UserAgreement';
-import AuthContext from 'helpers/AuthContext';
+// import AuthContext from 'helpers/AuthContext';
 import ProfileEdit from '../components/settings/profile/ProfileEdit';
 import ChangePassword from '../components/settings/profile/ChangePassword';
 import Vehicles from '../components/settings/profile/pages/vehicles/Vehicles';
@@ -32,6 +32,8 @@ import FuelTaxCollector from '../components/settings/profile/pages/FuelTaxCollec
 import BankDetail from '../components/settings/profile/pages/BankDetail';
 import WeaklyPayout from '../components/settings/profile/pages/WeaklyPayout';
 
+const AuthContext = React.createContext();
+
 const App = () => {
   const [loading, setLoading] = useState(true);
   const [user, setUser] = useState(null);
@@ -47,7 +49,7 @@ const App = () => {
       setUser(userData);
       setLoading(false);
     }
-    checkUser();
+    // checkUser();
   }, []);
 
   const signIn = (data) => {
@@ -62,39 +64,39 @@ const App = () => {
 
   const mainNav = () => (
     <Stack.Navigator headerMode="none">
-      {loading ? (
-        <Stack.Screen name="Welcome" component={SplashScreen} />
-      ) : (
-        <>
-          <Stack.Screen name="Intro" component={Intro} />
-          <Stack.Screen name="VehicleDetail" component={VehicleDetail} />
-          <Stack.Screen name="Document" component={Document} />
-          <Stack.Screen name="SignIn" component={SignInScreen} />
-          <Stack.Screen name="UserAgreement" component={UserAgreementScreen} />
-          <Stack.Screen name="ProfileEdit" component={ProfileEdit} />
-          <Stack.Screen name="ChangePassword" component={ChangePassword} />
-          <Stack.Screen name="Vehicles" component={Vehicles} />
-          <Stack.Screen name="FriendInvitation" component={FriendInvitation} />
-          <Stack.Screen name="DriverRating" component={DriverRating} />
-          <Stack.Screen name="Documents" component={Documents} />
-          <Stack.Screen name="About" component={About} />
-          <Stack.Screen name="NestedSetting" component={NestedSetting} />
-          <Stack.Screen name="Podcast" component={Podcast} />
-          <Stack.Screen name="SMSVerify" component={SMSVerify} />
-          <Stack.Screen name="EarningsDetail" component={EarningsDetail} />
-          <Stack.Screen name="PickupRequests" component={PickupRequests} />
-          <Stack.Screen name="OrderDetail" component={OrderDetail} />
-          <Stack.Screen name="OrderDetailBid" component={OrderDetailBid} />
-          <Stack.Screen name="Invoices" component={Invoices} />
-          <Stack.Screen name="InvoicesTwo" component={InvoicesTwo} />
-          <Stack.Screen name="InvoicesFour" component={InvoicesFour} />
-          <Stack.Screen name="FuelTaxCollector" component={FuelTaxCollector} />
-          <Stack.Screen name="BankDetail" component={BankDetail} />
-          <Stack.Screen name="WeaklyPayout" component={WeaklyPayout} />
+      {/*{loading ? (*/}
+      {/*  <Stack.Screen name="Welcome" component={SplashScreen} />*/}
+      {/*) : (*/}
+      {/*  <>*/}
+      <Stack.Screen name="Intro" component={Intro} />
+      <Stack.Screen name="VehicleDetail" component={VehicleDetail} />
+      <Stack.Screen name="Document" component={Document} />
+      <Stack.Screen name="SignIn" component={SignInScreen} />
+      <Stack.Screen name="UserAgreement" component={UserAgreementScreen} />
+      <Stack.Screen name="ProfileEdit" component={ProfileEdit} />
+      <Stack.Screen name="ChangePassword" component={ChangePassword} />
+      <Stack.Screen name="Vehicles" component={Vehicles} />
+      <Stack.Screen name="FriendInvitation" component={FriendInvitation} />
+      <Stack.Screen name="DriverRating" component={DriverRating} />
+      <Stack.Screen name="Documents" component={Documents} />
+      <Stack.Screen name="About" component={About} />
+      <Stack.Screen name="NestedSetting" component={NestedSetting} />
+      <Stack.Screen name="Podcast" component={Podcast} />
+      <Stack.Screen name="SMSVerify" component={SMSVerify} />
+      <Stack.Screen name="EarningsDetail" component={EarningsDetail} />
+      <Stack.Screen name="PickupRequests" component={PickupRequests} />
+      <Stack.Screen name="OrderDetail" component={OrderDetail} />
+      <Stack.Screen name="OrderDetailBid" component={OrderDetailBid} />
+      <Stack.Screen name="Invoices" component={Invoices} />
+      <Stack.Screen name="InvoicesTwo" component={InvoicesTwo} />
+      <Stack.Screen name="InvoicesFour" component={InvoicesFour} />
+      <Stack.Screen name="FuelTaxCollector" component={FuelTaxCollector} />
+      <Stack.Screen name="BankDetail" component={BankDetail} />
+      <Stack.Screen name="WeaklyPayout" component={WeaklyPayout} />
 
-          <Stack.Screen name="Home" component={MainTab} />
-        </>
-      )}
+      <Stack.Screen name="Home" component={MainTab} />
+      {/*  </>*/}
+      {/*)}*/}
     </Stack.Navigator>
   );
   return (
