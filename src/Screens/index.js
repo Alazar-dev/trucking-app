@@ -1,10 +1,8 @@
-import React, {useState, useMemo} from 'react';
+import React, {useMemo, useState} from 'react';
 import {NavigationContainer} from '@react-navigation/native';
 import {createStackNavigator} from '@react-navigation/stack';
-import AsyncStorage from '@react-native-community/async-storage';
 
 import MainTab from './MainTab';
-import SplashScreen from './Splash';
 import SignInScreen from './Signin';
 import Intro from './Intro';
 import VehicleDetail from './vehicleDetail/VehicleDetail';
@@ -35,20 +33,19 @@ import WeaklyPayout from '../components/settings/profile/pages/WeaklyPayout';
 const AuthContext = React.createContext();
 
 const App = () => {
-  const [loading, setLoading] = useState(true);
   const [user, setUser] = useState(null);
 
   useMemo(() => {
-    async function checkUser() {
-      let userData;
-      try {
-        userData = await AsyncStorage.getItem('userToken');
-      } catch (e) {
-        // Restoring token failed
-      }
-      setUser(userData);
-      setLoading(false);
-    }
+    // async function checkUser() {
+    //   let userData;
+    //   try {
+    //     userData = await AsyncStorage.getItem('userToken');
+    //   } catch (e) {
+    //     // Restoring token failed
+    //   }
+    //   setUser(userData);
+    //   setLoading(false);
+    // }
     // checkUser();
   }, []);
 

@@ -1,13 +1,14 @@
 import React, {useState} from 'react';
 import {
-  View,
-  Text,
-  StyleSheet,
-  TouchableOpacity,
-  ScrollView,
-  KeyboardAvoidingView,
   CheckBox,
+  KeyboardAvoidingView,
+  ScrollView,
+  StyleSheet,
+  Text,
+  TouchableOpacity,
+  View,
 } from 'react-native';
+
 const TermsAndConditions = (props) => {
   const [isSelected, setSelection] = useState(false);
   return (

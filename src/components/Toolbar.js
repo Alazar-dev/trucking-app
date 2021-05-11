@@ -1,5 +1,5 @@
 import React from 'react';
-import {StyleSheet, View, Text} from 'react-native';
+import {StyleSheet, Text, View} from 'react-native';
 import {getStatusBarHeight} from 'react-native-iphone-x-helper';
 
 const Toolbar = ({left, title = '', right}) => {

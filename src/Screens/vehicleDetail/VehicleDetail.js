@@ -1,12 +1,12 @@
-import React, {useState, createRef} from 'react';
+import React, {createRef, useState} from 'react';
 import {
-  View,
-  TextInput,
-  TouchableOpacity,
-  Text,
-  StyleSheet,
   KeyboardAvoidingView,
   ScrollView,
+  StyleSheet,
+  Text,
+  TextInput,
+  TouchableOpacity,
+  View,
 } from 'react-native';
 import {StatusBar} from 'expo-status-bar';
 import {AntDesign} from '@expo/vector-icons';

@@ -1,13 +1,13 @@
 import React, {useState} from 'react';
 import {
-  View,
-  TouchableOpacity,
-  Text,
-  StyleSheet,
   ScrollView,
+  StyleSheet,
   Switch,
+  Text,
+  TouchableOpacity,
+  View,
 } from 'react-native';
-import {AntDesign, FontAwesome} from '@expo/vector-icons';
+import {AntDesign} from '@expo/vector-icons';
 
 export default function NestedSetting(props) {
   const [googleEnabled, setGoogleEnable] = useState(false);

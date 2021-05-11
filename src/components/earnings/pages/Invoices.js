@@ -15,7 +15,7 @@ import PhoneInput from 'react-native-phone-number-input';
 export default function Invoices(props) {
   const phoneInput = useRef();
   const [value, setValue] = useState('');
-  const [formattedValue, setFormattedValue] = useState('');
+  const [setFormattedValue] = useState('');
   return (
     <View>
       <ScrollView>

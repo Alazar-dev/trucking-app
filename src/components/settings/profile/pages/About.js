@@ -1,12 +1,12 @@
 import React from 'react';
 import {
-  View,
-  Text,
-  StyleSheet,
   Image,
   KeyboardAvoidingView,
   ScrollView,
+  StyleSheet,
+  Text,
   TouchableOpacity,
+  View,
 } from 'react-native';
 
 import {AntDesign} from '@expo/vector-icons';

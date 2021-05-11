@@ -1,7 +1,14 @@
-import React from "react";
-import { KeyboardAvoidingView, ScrollView, StyleSheet, Text, TouchableOpacity, View } from "react-native";
+import React from 'react';
+import {
+  KeyboardAvoidingView,
+  ScrollView,
+  StyleSheet,
+  Text,
+  TouchableOpacity,
+  View,
+} from 'react-native';
 // import {Searchbar} from 'react-native-paper';
-import { AntDesign, Entypo, FontAwesome } from "@expo/vector-icons";
+import {AntDesign, Entypo, FontAwesome} from '@expo/vector-icons';
 
 const Podcast = (props) => {
   return (

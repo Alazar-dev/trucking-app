@@ -1,13 +1,13 @@
 import React from 'react';
 import {
-  View,
+  ScrollView,
+  StyleSheet,
   Text,
   TouchableOpacity,
-  StyleSheet,
-  ScrollView,
+  View,
 } from 'react-native';
-import {AntDesign} from '@expo/vector-icons';
-import {Entypo} from '@expo/vector-icons';
+import {AntDesign, Entypo} from '@expo/vector-icons';
+
 export default function OrderDetail(props) {
   return (
     <View>

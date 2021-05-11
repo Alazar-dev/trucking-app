@@ -1,5 +1,5 @@
 import React from 'react';
-import {View, Text, TouchableOpacity} from 'react-native';
+import {Text, TouchableOpacity, View} from 'react-native';
 import {AntDesign} from '@expo/vector-icons';
 
 export default function ProfileDetail(props) {

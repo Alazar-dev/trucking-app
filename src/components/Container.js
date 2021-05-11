@@ -1,5 +1,5 @@
 import React from 'react';
-import {View, StatusBar} from 'react-native';
+import {StatusBar, View} from 'react-native';
 
 const Container = ({children, style}) => {
   return (
