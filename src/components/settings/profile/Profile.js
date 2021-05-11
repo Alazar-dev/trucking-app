@@ -36,7 +36,7 @@ export default function Profile(props) {
 
 const profileData = {
   name: 'Alejandro Lopez',
-  job: 'KEY Driver',
+  job: 'Driver',
   email: 'alejandro@gmail.com',
   phone: '0987654321',
 };
