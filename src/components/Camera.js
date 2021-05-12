@@ -1,5 +1,5 @@
-import React, {useState, useEffect} from 'react';
-import {StyleSheet, Text, View, TouchableOpacity} from 'react-native';
+import React, {useEffect, useState} from 'react';
+import {StyleSheet, Text, TouchableOpacity, View} from 'react-native';
 import {Camera} from 'expo-camera';
 
 export default function CameraComponent() {
@@ -43,11 +43,11 @@ export default function CameraComponent() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    marginLeft: -90
+    marginLeft: -90,
   },
   camera: {
     flex: 1,
-    width: '145%'
+    width: '145%',
   },
   buttonContainer: {
     flex: 1,

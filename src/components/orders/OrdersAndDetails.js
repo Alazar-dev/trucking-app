@@ -5,8 +5,8 @@ import {
   ScrollView,
   StyleSheet,
   Text,
-  View,
   TouchableOpacity,
+  View,
 } from 'react-native';
 import ScheduledOrdersData from './ScheduledOrdersData';
 import OrdersData from './OrdersData';

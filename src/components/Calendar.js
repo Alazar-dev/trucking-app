@@ -34,8 +34,8 @@ const App = () => {
               marginLeft: 36,
             },
           }}
-          onDateChange={(date) => {
-            setDate(date);
+          onDateChange={(dateInternal) => {
+            setDate(dateInternal);
           }}
         />
       </View>

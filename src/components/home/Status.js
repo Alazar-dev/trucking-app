@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import {StyleSheet, Text, View, Switch, TouchableOpacity} from 'react-native';
+import {StyleSheet, Switch, Text, TouchableOpacity, View} from 'react-native';
 
 const Status = (props) => {
   const [isEnabled, setIsEnabled] = useState(false);

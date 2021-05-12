@@ -1,11 +1,11 @@
 import React, {useState} from 'react';
 import {
-  View,
-  TouchableOpacity,
-  Text,
-  StyleSheet,
   ScrollView,
+  StyleSheet,
   Switch,
+  Text,
+  TouchableOpacity,
+  View,
 } from 'react-native';
 import {AntDesign} from '@expo/vector-icons';
 

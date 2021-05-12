@@ -1,21 +1,21 @@
-import React, {useState, createRef} from 'react';
+import React, {createRef, useState} from 'react';
 import {
-  View,
+  Image,
+  Keyboard,
+  KeyboardAvoidingView,
+  ScrollView,
+  StyleSheet,
+  Text,
   TextInput,
   TouchableOpacity,
-  Text,
-  StyleSheet,
-  Image,
-  KeyboardAvoidingView,
-  Keyboard,
-  ScrollView,
+  View,
 } from 'react-native';
 // import AuthContext from 'helpers/AuthContext';
 
 const SignIn = (props) => {
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
-  const [errortext, setErrortext] = useState('');
+  const [setEmail] = useState('');
+  const [setPassword] = useState('');
+  const [errortext] = useState('');
   const passwordInputRef = createRef();
 
   // const {signIn} = useContext(AuthContext);

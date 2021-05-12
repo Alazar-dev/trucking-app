@@ -1,6 +1,6 @@
 import React from 'react';
-import {View, Text, TouchableOpacity, StyleSheet} from 'react-native';
-import {Avatar} from 'react-native-paper';
+import {StyleSheet, Text, TouchableOpacity, View} from 'react-native';
+// import {Avatar} from 'react-native-paper';
 import {AntDesign} from '@expo/vector-icons';
 
 export default function Profile(props) {
@@ -19,10 +19,10 @@ export default function Profile(props) {
       </View>
       <View style={{flex: 1, flexDirection: 'row', padding: 30}}>
         <View>
-          <Avatar.Image
-            size={90}
-            source={require('../../../../assets/profile.jpeg')}
-          />
+          {/*<Avatar.Image*/}
+          {/*  size={90}*/}
+          {/*  source={require('../../../../assets/profile.jpeg')}*/}
+          {/*/>*/}
         </View>
         <View style={{flex: 5, padding: 10}}>
           <View>

@@ -1,10 +1,10 @@
 import React from 'react';
 import {
   ScrollView,
-  View,
+  StyleSheet,
   Text,
   TouchableOpacity,
-  StyleSheet,
+  View,
 } from 'react-native';
 import HeaderOrders from '../../components/orders/HeaderOrders';
 import OrdersAndDetails from '../../components/orders/OrdersAndDetails';

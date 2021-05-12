@@ -1,14 +1,13 @@
 import React from 'react';
 import {
-  View,
-  Text,
-  StyleSheet,
-  TouchableOpacity,
   ScrollView,
+  StyleSheet,
+  Text,
+  TouchableOpacity,
+  View,
 } from 'react-native';
 import {AntDesign} from '@expo/vector-icons';
-import {Avatar} from 'react-native-paper';
-
+// import {Avatar} from 'react-native-paper';
 export default function PickupRequests(props) {
   return (
     <View>
@@ -44,7 +43,7 @@ export default function PickupRequests(props) {
                   borderBottomColor: '#9e9e9e',
                 }}>
                 <View style={{flex: 1}}>
-                  <Avatar.Image size={30} source={vehicle.photo} />
+                  {/*<Avatar.Image size={30} source={vehicle.photo} />*/}
                 </View>
                 <View style={{flex: 4}}>
                   <Text style={{fontSize: 18}}>{vehicle.name}</Text>

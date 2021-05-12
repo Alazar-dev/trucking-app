@@ -1,15 +1,14 @@
 import React from 'react';
 import {
-  View,
-  Text,
-  StyleSheet,
   KeyboardAvoidingView,
   ScrollView,
+  StyleSheet,
+  Text,
   TouchableOpacity,
+  View,
 } from 'react-native';
-import {Searchbar} from 'react-native-paper';
-
-import {AntDesign, FontAwesome, Entypo} from '@expo/vector-icons';
+// import {Searchbar} from 'react-native-paper';
+import {AntDesign, Entypo, FontAwesome} from '@expo/vector-icons';
 
 const Podcast = (props) => {
   return (
@@ -64,7 +63,7 @@ const Podcast = (props) => {
           </View>
         </View>
         <View style={{margin: 20, paddingTop: 20}}>
-          <Searchbar placeholder="Search" />
+          {/*<Searchbar placeholder="Search" />*/}
         </View>
         {podcasts.map((podcast) => (
           <View style={{flexDirection: 'row', padding: 10}}>

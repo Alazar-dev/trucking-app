@@ -1,15 +1,14 @@
 import React, {useState} from 'react';
 import {
-  View,
-  Text,
-  TouchableOpacity,
-  StyleSheet,
   ScrollView,
+  StyleSheet,
+  Text,
   TextInput,
+  TouchableOpacity,
+  View,
 } from 'react-native';
-import {AntDesign} from '@expo/vector-icons';
-import {Avatar} from 'react-native-paper';
-import {Entypo} from '@expo/vector-icons';
+// import {Avatar} from 'react-native-paper';
+import {AntDesign, Entypo} from '@expo/vector-icons';
 
 export default function OrderDetailBid(props) {
   const [bid, setBid] = useState('Send');
@@ -29,10 +28,10 @@ export default function OrderDetailBid(props) {
         </View>
         <View style={{flexDirection: 'row', padding: 10}}>
           <View style={{flex: 1}}>
-            <Avatar.Image
-              size={30}
-              source={require('../../../assets/xyz.jpeg')}
-            />
+            {/*<Avatar.Image*/}
+            {/*  size={30}*/}
+            {/*  source={require('../../../assets/xyz.jpeg')}*/}
+            {/*/>*/}
           </View>
           <View style={{flex: 4}}>
             <Text style={{fontSize: 18}}>XYZ Company</Text>

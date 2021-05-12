@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {View, StyleSheet} from 'react-native';
+import {StyleSheet, View} from 'react-native';
 import {Picker} from 'react-native-picker-dropdown';
 import {Feather, Fontisto} from '@expo/vector-icons';
 

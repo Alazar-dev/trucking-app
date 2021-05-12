@@ -1,6 +1,6 @@
 import React from 'react';
 
-import {View, Dimensions} from 'react-native';
+import {Dimensions, View} from 'react-native';
 import {LineChart} from 'react-native-chart-kit';
 
 const EarningChart = () => {

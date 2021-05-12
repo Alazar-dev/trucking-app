@@ -1,18 +1,18 @@
-import React, {useState, createRef} from 'react';
+import React, {createRef, useState} from 'react';
 import {
-  View,
+  Image,
+  Keyboard,
+  KeyboardAvoidingView,
+  ScrollView,
+  StyleSheet,
+  Text,
   TextInput,
   TouchableOpacity,
-  Text,
-  StyleSheet,
-  Image,
-  KeyboardAvoidingView,
-  Keyboard,
-  ScrollView,
+  View,
 } from 'react-native';
 
 const SMSVerify = (props) => {
-  const [errortext, setErrortext] = useState('');
+  const [errortext] = useState('');
   const passwordInputRef = createRef();
 
   return (

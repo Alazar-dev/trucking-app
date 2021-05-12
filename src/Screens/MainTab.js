@@ -4,7 +4,7 @@ import HomeScreen from './main/Home';
 import EarningsScreen from './main/Earnings';
 import OrdersScreen from './main/Orders';
 import SettingScreen from './main/Settings';
-import {SimpleLineIcons, Feather} from '@expo/vector-icons';
+import {Feather, SimpleLineIcons} from '@expo/vector-icons';
 
 const MainTab = () => {
   const Tab = createBottomTabNavigator();

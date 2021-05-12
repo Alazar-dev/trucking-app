@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import {View, Text, TouchableOpacity} from 'react-native';
+import {Text, TouchableOpacity, View} from 'react-native';
 import {AntDesign} from '@expo/vector-icons';
 import {Picker} from '@react-native-picker/picker';
 

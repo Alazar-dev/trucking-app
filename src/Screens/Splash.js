@@ -1,11 +1,11 @@
 import React from 'react';
 import {
-  View,
-  Text,
-  StyleSheet,
   Image,
   KeyboardAvoidingView,
   ScrollView,
+  StyleSheet,
+  Text,
+  View,
 } from 'react-native';
 
 const Splash = () => {

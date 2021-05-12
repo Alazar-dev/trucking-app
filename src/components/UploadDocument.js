@@ -1,5 +1,5 @@
 import React from 'react';
-import {StyleSheet, View, TouchableOpacity, Image} from 'react-native';
+import {Image, StyleSheet, TouchableOpacity, View} from 'react-native';
 import {DocumentPicker, ImagePicker} from 'expo';
 
 export default class App extends React.Component {

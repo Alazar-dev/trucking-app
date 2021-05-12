@@ -1,11 +1,11 @@
 import React from 'react';
 import {
-  View,
-  Text,
-  TouchableOpacity,
-  StyleSheet,
   ScrollView,
+  StyleSheet,
+  Text,
   TextInput,
+  TouchableOpacity,
+  View,
 } from 'react-native';
 import {AntDesign} from '@expo/vector-icons';
 import Calendar from '../../Calendar';
