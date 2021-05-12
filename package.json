@@ -10,7 +10,6 @@
     "lint": "eslint . --fix",
     "ci-test": "jest --ci",
     "ci-lint": "eslint App.js components constants navigation screens -f ./node_modules/eslint-junit/index.js"
-
   },
   "dependencies": {
     "@expo/vector-icons": "^12.0.4",
