@@ -4,6 +4,7 @@ import {
   Keyboard,
   KeyboardAvoidingView,
   ScrollView,
+  StatusBar,
   StyleSheet,
   Text,
   TextInput,
@@ -22,6 +23,7 @@ const SignIn = (props) => {
 
   return (
     <View style={styles.mainBody}>
+      <StatusBar backgroundColor={'#F9FAFA'} barStyle={'dark-content'} />
       {/* <Loader loading={loading} /> */}
       <ScrollView
         keyboardShouldPersistTaps="handled"

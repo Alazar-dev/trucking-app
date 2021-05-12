@@ -9,8 +9,9 @@ import {
   KeyboardAvoidingView,
   Keyboard,
   ScrollView,
+  StatusBar,
 } from 'react-native';
-import AuthContext from 'helpers/AuthContext';
+// import AuthContext from 'helpers/AuthContext';
 
 export default function ForgetPassword(props) {
   const [email, setEmail] = useState('');
@@ -22,6 +23,7 @@ export default function ForgetPassword(props) {
 
   return (
     <View style={styles.mainBody}>
+      <StatusBar backgroundColor={'#F9FAFA'} barStyle={'dark-content'} />
       {/* <Loader loading={loading} /> */}
       <ScrollView
         keyboardShouldPersistTaps="handled"
@@ -89,7 +91,7 @@ export default function ForgetPassword(props) {
       </ScrollView>
     </View>
   );
-};
+}
 
 const styles = StyleSheet.create({
   mainBody: {
@@ -147,4 +149,3 @@ const styles = StyleSheet.create({
     fontSize: 14,
   },
 });
-

@@ -6,6 +6,7 @@ import {
   Text,
   TouchableOpacity,
   View,
+  StatusBar,
 } from 'react-native';
 
 import {AntDesign} from '@expo/vector-icons';
@@ -17,6 +18,7 @@ const Document = (props) => {
   const onClick = () => setShowCamera(true);
   return (
     <View style={styles.mainBody}>
+      <StatusBar backgroundColor={'#F9FAFA'} barStyle={'dark-content'} />
       <View style={{flexDirection: 'row', margin: 20, marginBottom: 30}}>
         <View style={{flex: 2}}>
           <TouchableOpacity

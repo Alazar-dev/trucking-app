@@ -5,6 +5,7 @@ import {
   Text,
   TouchableOpacity,
   View,
+  StatusBar,
 } from 'react-native';
 import HeaderOrders from '../../components/orders/HeaderOrders';
 import OrdersAndDetails from '../../components/orders/OrdersAndDetails';
@@ -12,6 +13,7 @@ import OrdersAndDetails from '../../components/orders/OrdersAndDetails';
 const Orders = (props) => {
   return (
     <View>
+      <StatusBar backgroundColor={'#F9FAFA'} barStyle={'dark-content'} />
       <ScrollView>
         <HeaderOrders />
         <TouchableOpacity style={styles.onlineStatus}>

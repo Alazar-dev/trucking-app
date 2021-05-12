@@ -3,6 +3,7 @@ import {
   CheckBox,
   KeyboardAvoidingView,
   ScrollView,
+  StatusBar,
   StyleSheet,
   Text,
   TouchableOpacity,
@@ -14,6 +15,7 @@ const TermsAndConditions = (props) => {
   return (
     <View>
       <ScrollView>
+        <StatusBar backgroundColor={'#F9FAFA'} barStyle={'dark-content'} />
         <KeyboardAvoidingView>
           <Text style={styles.headerText}>Terms and Conditions</Text>
           <View>

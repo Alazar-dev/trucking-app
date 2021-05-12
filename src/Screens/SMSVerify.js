@@ -4,6 +4,7 @@ import {
   Keyboard,
   KeyboardAvoidingView,
   ScrollView,
+  StatusBar,
   StyleSheet,
   Text,
   TextInput,
@@ -24,6 +25,7 @@ const SMSVerify = (props) => {
           justifyContent: 'center',
           alignContent: 'center',
         }}>
+        <StatusBar backgroundColor={'#F9FAFA'} barStyle={'dark-content'} />
         <View>
           <KeyboardAvoidingView enabled>
             <View style={{alignItems: 'center'}}>

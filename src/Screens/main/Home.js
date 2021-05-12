@@ -17,7 +17,7 @@ import Status from '../../components/home/Status';
 const Home = (props) => {
   return (
     <View>
-      <StatusBar barStyle="dark-content" />
+      <StatusBar backgroundColor="#F9FAFA" barStyle={'dark-content'} />
       <HeaderHome />
       <Map />
       <WelcomeModal />

@@ -6,7 +6,7 @@
 import React from 'react';
 
 // import all the components we are going to use
-import {StyleSheet, View, Text, Image} from 'react-native';
+import {StyleSheet, View, Text, Image, StatusBar} from 'react-native';
 import {Ionicons} from '@expo/vector-icons';
 
 //import AppIntroSlider to use it
@@ -26,6 +26,7 @@ const Intro = (props) => {
           justifyContent: 'center',
           alignContent: 'center',
         }}>
+        <StatusBar backgroundColor={'#F9FAFA'} barStyle={'dark-content'} />
         <Image style={styles.introImageStyle} source={item.image} />
         <Text style={styles.introTitleStyle}>{item.title}</Text>
         <Text style={styles.introTextStyle}>{item.text}</Text>
@@ -139,32 +140,28 @@ const styles = StyleSheet.create({
 const slides = [
   {
     key: 's1',
-    text:
-      'Your schedule, your choice. Trucking app driver choose when and how they want to work, sospending time with family is an option again',
+    text: 'Your schedule, your choice. Trucking app driver choose when and how they want to work, sospending time with family is an option again',
     title: 'Lives over rides',
     image: require('../assets/Logo.png'),
   },
   {
     key: 's2',
     title: 'Fast',
-    text:
-      'Your schedule, your choice. Trucking app driver choose when and how they want to work, sospending time with family is an option again',
+    text: 'Your schedule, your choice. Trucking app driver choose when and how they want to work, sospending time with family is an option again',
     image: require('../assets/Logo.png'),
     backgroundColor: '#febe29',
   },
   {
     key: 's3',
     title: 'Reliable',
-    text:
-      'Your schedule, your choice. Trucking app driver choose when and how they want to work, sospending time with family is an option again',
+    text: 'Your schedule, your choice. Trucking app driver choose when and how they want to work, sospending time with family is an option again',
     image: require('../assets/Logo.png'),
     backgroundColor: '#22bcb5',
   },
   {
     key: 's4',
     title: 'Up to date',
-    text:
-      'Your schedule, your choice. Trucking app driver choose when and how they want to work, sospending time with family is an option again',
+    text: 'Your schedule, your choice. Trucking app driver choose when and how they want to work, sospending time with family is an option again',
     image: require('../assets/Logo.png'),
     backgroundColor: '#3395ff',
   },

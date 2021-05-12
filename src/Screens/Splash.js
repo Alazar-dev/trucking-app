@@ -3,6 +3,7 @@ import {
   Image,
   KeyboardAvoidingView,
   ScrollView,
+  StatusBar,
   StyleSheet,
   Text,
   View,
@@ -18,6 +19,7 @@ const Splash = () => {
           justifyContent: 'center',
           alignContent: 'center',
         }}>
+        <StatusBar backgroundColor={'#F9FAFA'} barStyle={'dark-content'} />
         <View>
           <KeyboardAvoidingView enabled>
             <View style={{alignItems: 'center'}}>

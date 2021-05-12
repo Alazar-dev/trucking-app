@@ -7,8 +7,8 @@ import {
   TextInput,
   TouchableOpacity,
   View,
+  StatusBar,
 } from 'react-native';
-import {StatusBar} from 'expo-status-bar';
 import {AntDesign} from '@expo/vector-icons';
 
 const VehicleDetail = (props) => {
@@ -21,13 +21,13 @@ const VehicleDetail = (props) => {
 
   return (
     <View style={styles.mainBody}>
-      <StatusBar style={'light'} />
       <ScrollView
         keyboardShouldPersistTaps="handled"
         contentContainerStyle={{
           justifyContent: 'center',
           alignContent: 'center',
         }}>
+        <StatusBar backgroundColor={'#F9FAFA'} barStyle={'dark-content'} />
         <View>
           <KeyboardAvoidingView enabled>
             <View style={{flexDirection: 'row', margin: 20, marginBottom: 30}}>
