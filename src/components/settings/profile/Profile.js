@@ -1,15 +1,15 @@
 import React from 'react';
 import {StyleSheet, Text, TouchableOpacity, View} from 'react-native';
-// import {Avatar} from 'react-native-paper';
+import {Avatar} from 'react-native-paper';
 
 export default function Profile(props) {
   return (
     <View style={{flex: 1, flexDirection: 'row', padding: 30}}>
       <View>
-        {/*<Avatar.Image*/}
-        {/*  size={90}*/}
-        {/*  source={require('../../../assets/profile.jpeg')}*/}
-        {/*/>*/}
+        <Avatar.Image
+          size={90}
+          source={require('../../../assets/profile.jpeg')}
+        />
       </View>
       <View style={{flex: 5, padding: 10}}>
         <View>

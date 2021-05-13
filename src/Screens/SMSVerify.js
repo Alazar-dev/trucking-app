@@ -1,4 +1,4 @@
-import React, {createRef, useState} from 'react';
+import React, {useState, useRef} from 'react';
 import {
   Image,
   Keyboard,
@@ -14,7 +14,9 @@ import {
 
 const SMSVerify = (props) => {
   const [errortext] = useState('');
-  const passwordInputRef = createRef();
+  const ref_input2 = useRef();
+  const ref_input3 = useRef();
+  const ref_input4 = useRef();
 
   return (
     <View style={styles.mainBody}>
@@ -54,14 +56,20 @@ const SMSVerify = (props) => {
                   returnKeyType="next"
                   maxLength={1}
                   autoFocus={true}
+                  onTextInput={() => {
+                    ref_input2.current.focus();
+                  }}
                 />
               </View>
               <View style={styles.SectionStyle}>
                 <TextInput
                   style={styles.inputStyle}
                   keyboardType="numeric"
-                  ref={passwordInputRef}
+                  ref={ref_input2}
                   onSubmitEditing={Keyboard.dismiss}
+                  onTextInput={() => {
+                    ref_input3.current.focus();
+                  }}
                   returnKeyType="next"
                   maxLength={1}
                 />
@@ -71,6 +79,10 @@ const SMSVerify = (props) => {
                   style={styles.inputStyle}
                   autoCapitalize="none"
                   keyboardType="numeric"
+                  ref={ref_input3}
+                  onTextInput={() => {
+                    ref_input4.current.focus();
+                  }}
                   returnKeyType="next"
                   maxLength={1}
                 />
@@ -79,9 +91,8 @@ const SMSVerify = (props) => {
                 <TextInput
                   style={styles.inputStyle}
                   keyboardType="numeric"
-                  ref={passwordInputRef}
                   onSubmitEditing={Keyboard.dismiss}
-                  returnKeyType="next"
+                  ref={ref_input4}
                   maxLength={1}
                 />
               </View>

@@ -18,7 +18,7 @@ const HeaderSettings = () => {
         </View>
         <View style={{flex: 3, height: '1%'}}>
           <TouchableOpacity style={styles.onlineStatus}>
-            <Text style={{color: '#fff', height: 41, padding: 10}}>
+            <Text style={{color: '#fff', height: 36.5, padding: 10}}>
               7 hours
             </Text>
           </TouchableOpacity>
